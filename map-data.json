@@ -41,7 +41,7 @@
       "properties": {
         "name": "Fermanagh Fun Farm",
         "description": "A fantastic day out with animal feeding, indoor play, and tractor rides.",
-        "infoUrl": "https://www.weeadventurers.com/fermanagh-animals",
+        "infoUrl": "https://www.weeadventurers.com/post/fermanagh-fun-farm",
         "category": "animals",
         "county": "fermanagh"
       }
@@ -98,7 +98,7 @@
         "description": "A classic dairy farm experience with puppy cuddling, bottle feeding, and barrel rides.",
         "infoUrl": "https://www.weeadventurers.com/post/streamvale-farm",
         "category": "animals",
-        "county": "belfast"
+        "county": "antrim"
       }
     },
     {
@@ -139,7 +139,7 @@
       "geometry": { "type": "Point", "coordinates": [-5.828179, 54.646343] },
       "properties": {
         "name": "Seapark Bay Beach",
-        "description": "Located in Holywood, this sandy beach has a brilliant large playpark and plenty of green space for a family picnic.",
+        "description": "Located in Holywood, this sandy beach has a brilliant, large playpark and plenty of green space for a family picnic.",
         "infoUrl": "https://www.weeadventurers.com/post/seapark-bay",
         "category": "beaches",
         "county": "north down"
@@ -150,7 +150,7 @@
       "geometry": { "type": "Point", "coordinates": [-5.728669, 54.666124] },
       "properties": {
         "name": "Crawfordsburn Country Park",
-        "description": "Two beautiful beaches tucked away in a country park with forest walks, a waterfall, and a modern visitor center.",
+        "description": "Two beautiful beaches tucked away in a country park with forest walks, a waterfall, and a modern visitor centre.",
         "infoUrl": "https://www.weeadventurers.com/post/helen-s-bay",
         "category": "beaches",
         "county": "north down"
@@ -194,8 +194,8 @@
       "geometry": { "type": "Point", "coordinates": [-6.747369, 54.647092] },
       "properties": {
         "name": "Wee Adventurers Play Hub",
-        "description": "A focused play center in Cookstown designed for younger children to explore and learn through play.",
-        "infoUrl": "https://www.weeadventurers.com/about-me",
+        "description": "A focused play centre in Cookstown designed for younger children to explore and learn through play.",
+        "infoUrl": "https://www.weeadventurers.com/post/wee-adventurers-play-hub",
         "category": "indoors",
         "county": "tyrone"
       }
@@ -205,7 +205,7 @@
       "geometry": { "type": "Point", "coordinates": [-6.970044, 54.495806] },
       "properties": {
         "name": "Happy Dayz",
-        "description": "A popular soft play center with a large multi-level frame, slides, and a dedicated toddler area.",
+        "description": "A popular soft play centre with a large multi-level frame, slides, and a dedicated toddler area.",
         "infoUrl": "https://www.weeadventurers.com/post/happy-dayz",
         "category": "indoors",
         "county": "tyrone"
@@ -238,7 +238,7 @@
       "geometry": { "type": "Point", "coordinates": [-6.040934, 54.500232] },
       "properties": {
         "name": "High Rise Lisburn",
-        "description": "A high-spec adventure center with climbing walls and a huge multi-story soft play area.",
+        "description": "A high-spec adventure centre with climbing walls and a huge multi-story soft play area.",
         "infoUrl": "https://www.weeadventurers.com/post/high-rise",
         "category": "indoors",
         "county": "antrim"
@@ -260,7 +260,7 @@
       "geometry": { "type": "Point", "coordinates": [-6.04678, 54.509904] },
       "properties": {
         "name": "Nature and Nurture",
-        "description": "A beautiful sensory-focused play center designed to be a calm and engaging environment for little ones.",
+        "description": "A beautiful sensory-focused play centre designed to be a calm and engaging environment for little ones.",
         "infoUrl": "https://www.weeadventurers.com/post/nature-nurture",
         "category": "indoors",
         "county": "antrim"
@@ -274,7 +274,7 @@
         "description": "Home to 'Surf Belfast' and a fantastic indoor water park with slides that the whole family will love.",
         "infoUrl": "https://www.weeadventurers.com/post/andersonstown-leisure-centre",
         "category": "indoors",
-        "county": "belfast"
+        "county": "antrim"
       }
     },
     {
@@ -285,7 +285,7 @@
         "description": "A creative and imaginative role-play studio where kids can pretend to be doctors, chefs, or shopkeepers.",
         "infoUrl": "https://www.weeadventurers.com/post/little-play-studio",
         "category": "indoors",
-        "county": "belfast"
+        "county": "antrim"
       }
     },
     {
@@ -296,7 +296,7 @@
         "description": "Belfast City Zoo's own indoor soft play. A fun, animal-themed adventure for kids to enjoy after seeing the zoo.",
         "infoUrl": "https://www.weeadventurers.com/post/roar-explore",
         "category": "indoors",
-        "county": "belfast"
+        "county": "antrim"
       }
     },
     {
@@ -304,10 +304,10 @@
       "geometry": { "type": "Point", "coordinates": [-5.91551, 54.604734] },
       "properties": {
         "name": "W5",
-        "description": "Ireland's award-winning science and discovery center. Interactive exhibits for kids of all ages.",
+        "description": "Ireland's award-winning science and discovery centre. Interactive exhibits for kids of all ages.",
         "infoUrl": "https://www.weeadventurers.com/post/w5",
         "category": "indoors",
-        "county": "belfast"
+        "county": "antrim"
       }
     },
     {
@@ -326,7 +326,7 @@
       "geometry": { "type": "Point", "coordinates": [-6.256826, 54.850844] },
       "properties": {
         "name": "Honeybees Playtown",
-        "description": "An imaginative role-play center where children can learn and explore in a miniature version of a real town.",
+        "description": "An imaginative role-play centre where children can learn and explore in a miniature version of a real town.",
         "infoUrl": "https://www.weeadventurers.com/post/honeybees-playtown",
         "category": "indoors",
         "county": "antrim"
@@ -381,7 +381,7 @@
       "geometry": { "type": "Point", "coordinates": [-6.441337, 54.423008] },
       "properties": {
         "name": "Playaway",
-        "description": "A well-established soft play center in Portadown with frames for different age groups.",
+        "description": "A well-established soft play centre in Portadown with frames for different age groups.",
         "infoUrl": "https://www.weeadventurers.com/post/playaway",
         "category": "indoors",
         "county": "armagh"
@@ -392,7 +392,7 @@
       "geometry": { "type": "Point", "coordinates": [-6.337056, 54.464117] },
       "properties": {
         "name": "The Hive",
-        "description": "An indoor adventure center featuring soft play, sensory areas, and role-play zones.",
+        "description": "An indoor adventure centre featuring soft play, sensory areas, and role-play zones.",
         "infoUrl": "https://www.weeadventurers.com/post/the-hive",
         "category": "indoors",
         "county": "armagh"
@@ -546,7 +546,7 @@
       "geometry": { "type": "Point", "coordinates": [-5.839985, 54.315604] },
       "properties": {
         "name": "Seaforde Gardens & Tropical Butterfly House",
-        "description": "Walk through a jungle filled with free-flying butterflies! Also features a maze and a great garden center cafe.",
+        "description": "Walk through a jungle filled with free-flying butterflies! Also features a maze and a great garden centre cafe.",
         "infoUrl": "https://www.weeadventurers.com/post/seaforde-gardens-and-tropical-butterfly-house",
         "category": "museums",
         "county": "down"
@@ -579,10 +579,10 @@
       "geometry": { "type": "Point", "coordinates": [-5.91551, 54.604734] },
       "properties": {
         "name": "W5 Interactive",
-        "description": "Interactive science center with hundreds of hands-on exhibits. A perfect rainy-day destination for all ages.",
+        "description": "Interactive science centre with hundreds of hands-on exhibits. A perfect rainy-day destination for all ages.",
         "infoUrl": "https://www.weeadventurers.com/post/w5",
         "category": "museums",
-        "county": "belfast"
+        "county": "antrim"
       }
     },
     {
@@ -712,7 +712,7 @@
       "properties": {
         "name": "Ramore Head",
         "description": "Dramatic coastal walks in Portrush. Great for exploring rock pools and watching the waves crash against the cliffs.",
-        "infoUrl": "https://www.weeadventurers.com/services-9-1",
+        "infoUrl": "https://www.weeadventurers.com/post/ramore-head",
         "category": "playparks",
         "county": "antrim"
       }
@@ -725,7 +725,7 @@
         "description": "Belfast's oldest municipal park. Large playgrounds, eco-trails, and wide paths perfect for learning to cycle.",
         "infoUrl": "https://www.weeadventurers.com/services-9-1",
         "category": "playparks",
-        "county": "belfast"
+        "county": "antrim"
       }
     },
     {
@@ -734,7 +734,7 @@
       "properties": {
         "name": "V36 Adventure Play Area",
         "description": "A massive, modern adventure park in Newtownabbey with climbing frames, zip wires, and a skate park.",
-        "infoUrl": "https://www.weeadventurers.com/services-9-1",
+        "infoUrl": "https://www.weeadventurers.com/post/__v36",
         "category": "playparks",
         "county": "antrim"
       }
@@ -745,7 +745,7 @@
       "properties": {
         "name": "Wallace Park",
         "description": "The 'Jewel of Lisburn'. Features a fantastic playground, a duck pond, and safe, flat walking paths.",
-        "infoUrl": "https://www.weeadventurers.com/services-9-1",
+        "infoUrl": "https://www.weeadventurers.com/post/wallace-park",
         "category": "playparks",
         "county": "antrim"
       }
@@ -756,9 +756,9 @@
       "properties": {
         "name": "Cave Hill Country Park",
         "description": "Home to Belfast Castle. The playground here is excellent, and the hike to McArt's Fort offers the best view in the city.",
-        "infoUrl": "https://www.weeadventurers.com/services-9-1",
+        "infoUrl": "https://www.weeadventurers.com/post/cave-hill",
         "category": "playparks",
-        "county": "belfast"
+        "county": "antrim"
       }
     },
     {
@@ -767,7 +767,7 @@
       "properties": {
         "name": "People's Park Ballymena",
         "description": "A lovely park in the heart of Ballymena with a lake, large playground, and well-maintained flower gardens.",
-        "infoUrl": "https://www.weeadventurers.com/services-9-1",
+        "infoUrl": "https://www.weeadventurers.com/post/people-s-park",
         "category": "playparks",
         "county": "antrim"
       }
@@ -789,9 +789,9 @@
       "properties": {
         "name": "Mo Mowlam Play Park",
         "description": "Located within the Stormont Estate. This is one of the best inclusive playgrounds in NI, catering to all abilities.",
-        "infoUrl": "https://www.weeadventurers.com/services-9-1",
+        "infoUrl": "https://www.weeadventurers.com/post/mo-mowlam",
         "category": "playparks",
-        "county": "belfast"
+        "county": "north down"
       }
     },
     {
@@ -800,7 +800,7 @@
       "properties": {
         "name": "Seapark Bay Park",
         "description": "Beach meets park! A large grassy area with a seaside playground and views across Belfast Lough.",
-        "infoUrl": "https://www.weeadventurers.com/north-down",
+        "infoUrl": "https://www.weeadventurers.com/post/seapark-bay",
         "category": "playparks",
         "county": "north down"
       }
@@ -821,7 +821,7 @@
       "geometry": { "type": "Point", "coordinates": [-5.895945, 54.394929] },
       "properties": {
         "name": "Montalto Estate Play Park",
-        "description": "A multi-award winning adventure playground designed to look like a treehouse. A must-visit destination.",
+        "description": "A multi-award-winning adventure playground designed to look like a treehouse. A must-visit destination.",
         "infoUrl": "https://www.weeadventurers.com/post/montalto-estate",
         "category": "playparks",
         "county": "down"
@@ -887,7 +887,7 @@
       "geometry": { "type": "Point", "coordinates": [-7.72834, 54.477447] },
       "properties": {
         "name": "Castle Archdale Park",
-        "description": "Lakeside trails, WWII history, and a great playground. A Fermanagh favorite for sunny days.",
+        "description": "Lakeside trails, WWII history, and a great playground. A Fermanagh favourite for sunny days.",
         "infoUrl": "https://www.weeadventurers.com/post/castle-archdale",
         "category": "playparks",
         "county": "fermanagh"
@@ -899,7 +899,7 @@
       "properties": {
         "name": "Round 'O' Park",
         "description": "Enniskillen's main riverside park. Duck feeding, boat trips, and a well-equipped playground.",
-        "infoUrl": "https://www.weeadventurers.com/fermanagh",
+        "infoUrl": "https://www.weeadventurers.com/post/round-o-jetty",
         "category": "playparks",
         "county": "fermanagh"
       }
@@ -910,7 +910,7 @@
       "properties": {
         "name": "Loughgall Country Park",
         "description": "Set in a rural estate with a large lake, forest walks, and a quiet, safe play area.",
-        "infoUrl": "https://www.weeadventurers.com/armagh",
+        "infoUrl": "https://www.weeadventurers.com/post/loughgall-country-park",
         "category": "playparks",
         "county": "armagh"
       }
@@ -921,7 +921,7 @@
       "properties": {
         "name": "Maghery Country Park",
         "description": "Located on the shores of Lough Neagh. Woodland walks and a pleasant playground in a quiet setting.",
-        "infoUrl": "https://www.weeadventurers.com/armagh",
+        "infoUrl": "https://www.weeadventurers.com/post/maghery-country-park",
         "category": "playparks",
         "county": "armagh"
       }
@@ -943,7 +943,7 @@
       "properties": {
         "name": "Peatlands Park",
         "description": "Unique bogland park with a narrow-gauge railway and miles of walking trails through the woods.",
-        "infoUrl": "https://www.weeadventurers.com/armagh",
+        "infoUrl": "https://www.weeadventurers.com/post/peatlands-park",
         "category": "playparks",
         "county": "armagh"
       }
@@ -954,7 +954,7 @@
       "properties": {
         "name": "Scarva Park",
         "description": "A lovely village park beside the canal. Famous for its tea rooms and the beautiful towpath walk.",
-        "infoUrl": "https://www.weeadventurers.com/armagh",
+        "infoUrl": "https://www.weeadventurers.com/post/scarva-park",
         "category": "playparks",
         "county": "armagh"
       }
@@ -965,7 +965,7 @@
       "properties": {
         "name": "Edenvilla Park",
         "description": "Home to the Secret Garden and a fantastic bird sanctuary. A quiet, peaceful park with a good playground.",
-        "infoUrl": "https://www.weeadventurers.com/armagh",
+        "infoUrl": "https://www.weeadventurers.com/post/edenvilla-park",
         "category": "playparks",
         "county": "armagh"
       }
@@ -976,7 +976,7 @@
       "properties": {
         "name": "Oxford Island",
         "description": "Nature reserve on Lough Neagh. Great for bird watching, woodland walks, and a lakeside picnic.",
-        "infoUrl": "https://www.weeadventurers.com/armagh",
+        "infoUrl": "https://www.weeadventurers.com/post/oxford-island",
         "category": "playparks",
         "county": "armagh"
       }
@@ -998,7 +998,7 @@
       "properties": {
         "name": "Lurgan Park",
         "description": "The second largest park in Ireland! Features a huge lake, miles of paths, and a great playground.",
-        "infoUrl": "https://www.weeadventurers.com/armagh",
+        "infoUrl": "https://www.weeadventurers.com/post/lurgan-park",
         "category": "playparks",
         "county": "armagh"
       }
@@ -1020,7 +1020,7 @@
       "properties": {
         "name": "Ballyarnett Country Park",
         "description": "A spacious park in Derry with a focus on biodiversity and outdoor family fun.",
-        "infoUrl": "https://www.weeadventurers.com/derry-londonderry",
+        "infoUrl": "https://www.weeadventurers.com/post/ballyarnett-country-park",
         "category": "playparks",
         "county": "derry"
       }
@@ -1031,7 +1031,7 @@
       "properties": {
         "name": "Limavady Play Park",
         "description": "A high-quality, accessible playground in the heart of Limavady designed for all children.",
-        "infoUrl": "https://www.weeadventurers.com/derry-londonderry",
+        "infoUrl": "https://www.weeadventurers.com/post/limavady-accessible-play-park",
         "category": "playparks",
         "county": "derry"
       }
@@ -1042,7 +1042,7 @@
       "properties": {
         "name": "Diversity Park",
         "description": "Located at Flowerfield Arts Centre. A fully inclusive play area with equipment for children of all abilities.",
-        "infoUrl": "https://www.weeadventurers.com/derry-londonderry",
+        "infoUrl": "https://www.weeadventurers.com/post/diversity-park",
         "category": "playparks",
         "county": "derry"
       }
@@ -1053,7 +1053,7 @@
       "properties": {
         "name": "Claudy Country Park",
         "description": "Lovely riverside walks and forest trails in a quiet setting. Perfect for a family dander.",
-        "infoUrl": "https://www.weeadventurers.com/derry-londonderry",
+        "infoUrl": "https://www.weeadventurers.com/post/claudy-country-park",
         "category": "playparks",
         "county": "derry"
       }
@@ -1086,7 +1086,7 @@
       "properties": {
         "name": "Iniscarn Forest",
         "description": "A hidden gem for forest walks and exploring the foothills of the Sperrins.",
-        "infoUrl": "https://www.weeadventurers.com/derry-londonderry",
+        "infoUrl": "https://www.weeadventurers.com/post/iniscarn-forest-park",
         "category": "playparks",
         "county": "derry"
       }
@@ -1097,7 +1097,7 @@
       "properties": {
         "name": "The Lake Kilrea WaterPark",
         "description": "Ireland's giant inflatable water park! Features massive slides, obstacles, and a 'total wipeout' style experience on the lake.",
-        "infoUrl": "https://www.weeadventurers.com/derry-londonderry",
+        "infoUrl": "https://www.weeadventurers.com/post/the-lake-kilrea",
         "category": "sports",
         "county": "derry"
       }
@@ -1108,7 +1108,7 @@
       "properties": {
         "name": "Jungle NI",
         "description": "One of the best adventure centres in NI. Offering paintball, zorbing, tree-top high ropes, and seasonal events like the Fright Night.",
-        "infoUrl": "https://www.weeadventurers.com/services-4",
+        "infoUrl": "https://www.weeadventurers.com/post/the-jungle",
         "category": "sports",
         "county": "derry"
       }
@@ -1130,7 +1130,7 @@
       "properties": {
         "name": "Life Adventure Centre",
         "description": "Based in Castlewellan, offering mountain bike hire, kayaking, and canoeing on the lake. Great for active families.",
-        "infoUrl": "https://www.weeadventurers.com/down",
+        "infoUrl": "https://www.weeadventurers.com/post/life-adventure-centre",
         "category": "sports",
         "county": "down"
       }
@@ -1141,9 +1141,9 @@
       "properties": {
         "name": "Let's Go Hydro",
         "description": "A premier water sports park with a huge inflatable aqua park, cable wakeboarding, and luxury glamping pods.",
-        "infoUrl": "https://www.weeadventurers.com/down",
+        "infoUrl": "https://www.weeadventurers.com/post/let-s-go-hydro",
         "category": "sports",
-        "county": "down"
+        "county": "north down"
       }
     },
     {
@@ -1152,7 +1152,7 @@
       "properties": {
         "name": "Castlewood Tree Top Adventure",
         "description": "Climb, swing, and zip through the trees at Antrim Lough Shore. A brilliant challenge for brave little adventurers.",
-        "infoUrl": "https://www.weeadventurers.com/services-9-1",
+        "infoUrl": "https://www.weeadventurers.com/post/castlewood-tree-top-adventure",
         "category": "sports",
         "county": "antrim"
       }
@@ -1173,7 +1173,7 @@
       "geometry": { "type": "Point", "coordinates": [-6.040934, 54.500232] },
       "properties": {
         "name": "High Rise Lisburn Sports",
-        "description": "A vertical adventure center featuring Clip 'n Climb walls, a massive soft play, and sensory rooms.",
+        "description": "A vertical adventure centre featuring Clip 'n Climb walls, a massive soft play, and sensory rooms.",
         "infoUrl": "https://www.weeadventurers.com/post/high-rise",
         "category": "sports",
         "county": "antrim"
@@ -1196,7 +1196,7 @@
       "properties": {
         "name": "DJ's Golf Driving Range",
         "description": "A family-friendly driving range in Cookstown. Great for a bit of competitive fun or introducing the kids to golf.",
-        "infoUrl": "https://www.weeadventurers.com/services-4",
+        "infoUrl": "https://www.weeadventurers.com/post/dj-s-golf-driving-range",
         "category": "sports",
         "county": "tyrone"
       }
@@ -1207,7 +1207,7 @@
       "properties": {
         "name": "Todds Leap Activity Centre",
         "description": "Extreme adventure! Off-road trucking, the giant swing, zip lines, and clay pigeon shooting for older kids and adults.",
-        "infoUrl": "https://www.weeadventurers.com/services-4",
+        "infoUrl": "https://www.weeadventurers.com/post/todd-s-leap",
         "category": "sports",
         "county": "tyrone"
       }
