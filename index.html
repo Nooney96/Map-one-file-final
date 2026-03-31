@@ -33,7 +33,25 @@
         /* Popup Styling */
         .popup-card { text-align: center; min-width: 220px; padding: 5px; }
         .popup-title { font-size: 18px; font-weight: bold; color: #2e7d32; display: block; margin-bottom: 5px; }
-        .go-btn { display: block; background: #2e7d32; color: white !important; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 8px; font-size: 12px; border: none; width: 100%; cursor: pointer; }
+        
+        /* Fixed Button Alignment */
+        .go-btn { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 8px;
+            background: #2e7d32; 
+            color: white !important; 
+            padding: 10px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            margin-top: 8px; 
+            font-size: 12px; 
+            border: none; 
+            width: 100%; 
+            cursor: pointer; 
+        }
         .go-btn-secondary { background: #e8f5e9; color: #2e7d32 !important; border: 1px solid #2e7d32; }
         .go-btn-outline { background: #f5f5f5; color: #444 !important; border: 1px solid #ddd; }
     </style>
@@ -50,7 +68,7 @@
             <button class="btn active" onclick="filterCounty('all', this)">NI ALL</button>
             <button class="btn" onclick="filterCounty('antrim', this)">ANTRIM</button>
             <button class="btn" onclick="filterCounty('armagh', this)">ARMAGH</button>
-            <button class="btn" onclick="filterCounty('derry', this)">L/DERRY</button>
+            <button class="btn" onclick="filterCounty('derry', this)">DERRY</button>
             <button class="btn" onclick="filterCounty('down', this)">DOWN</button>
             <button class="btn" onclick="filterCounty('north down', this)">NORTH DOWN</button>
             <button class="btn" onclick="filterCounty('fermanagh', this)">FERMANAGH</button>
@@ -74,7 +92,7 @@
             <span>INDOOR</span>
         </div>
         <div class="cat-item" onclick="filterCategory('animals', this)">
-            <img src="https://cdn-icons-png.flaticon.com/512/1998/1998671.png" />
+            <img src="https://img.icons8.com/color/48/pet-commands-summon.png" />
             <span>ANIMALS</span>
         </div>
         <div class="cat-item" onclick="filterCategory('beaches', this)">
@@ -105,7 +123,6 @@
         let currentCategory = 'all';
         const markers = L.markerClusterGroup({ disableClusteringAtZoom: 16 }).addTo(map);
 
-        // Update this URL if your repository name changes
         const dataUrl = 'https://raw.githubusercontent.com/Nooney96/Map-one-file-final/main/map-data.json';
 
         fetch(dataUrl).then(res => res.json()).then(data => {
