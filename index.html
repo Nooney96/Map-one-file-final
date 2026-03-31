@@ -2,249 +2,88 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Wee Adventurers NI Map</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wee Adventurers NI</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-search@3.0.2/dist/leaflet-search.min.css" />
-    
     <style>
-        html, body, #map { height: 100%; width: 100%; margin: 0; padding: 0; background: #fff; font-family: 'Segoe UI', sans-serif; }
-        
-        /* COUNTY BAR */
-        #county-bar { 
-            position: absolute; top: 15px; left: 50%; transform: translateX(-50%); 
-            z-index: 1000; display: flex; align-items: center; justify-content: center;
-            gap: 8px; flex-wrap: wrap; background: rgba(255,255,255,0.95); padding: 12px 20px; 
-            border-radius: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); 
-            width: 90%; max-width: 1100px; overflow: hidden;
-        }
-
-        /* SEARCH & RESET */
-        #search-container { display: flex; align-items: center; background: #fff; border: 2px solid #2e7d32; border-radius: 20px; padding: 2px 12px; min-width: 160px; }
-        #search-container input { border: none; outline: none; padding: 6px; font-size: 13px; width: 120px; }
-        .reset-btn { padding: 8px 16px; font-size: 11px; font-weight: bold; cursor: pointer; border-radius: 20px; background: #f44336; color: white; border: none; }
-        .county-item { padding: 8px 16px; font-size: 11px; font-weight: bold; cursor: pointer; border: 1px solid #ddd; border-radius: 20px; background: white; }
-        .county-item.active { background: #2e7d32; color: white; border-color: #2e7d32; }
-        
-        /* BOTTOM FILTER BAR */
-        #filter-bar { 
-            position: absolute; bottom: 25px; left: 50%; transform: translateX(-50%); 
-            z-index: 1000; display: flex; gap: 8px; background: rgba(255, 255, 255, 0.95); 
-            padding: 12px; border-radius: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
-            width: 92%; max-width: 650px; justify-content: space-around; 
-        }
-        .filter-item { display: flex; flex-direction: column; align-items: center; cursor: pointer; min-width: 60px; }
-        .filter-item img { width: 30px; height: 30px; background: #f8f8f8; padding: 8px; border-radius: 50%; border: 2px solid transparent; }
-        .filter-item.active img { border: 2px solid #2e7d32; background: #c8e6c9; }
-        .filter-item span { font-size: 8px; margin-top: 6px; font-weight: bold; text-transform: uppercase; color: #444; }
-        
-        /* SIDE BUTTONS */
-        .side-btn { position: absolute; right: 15px; z-index: 1000; background: white; width: 46px; height: 46px; text-align: center; line-height: 46px; border-radius: 50%; box-shadow: 0 2px 10px rgba(0,0,0,0.3); cursor: pointer; font-size: 22px; }
-        #locate-btn { top: 120px; color: #2196F3; }
-
-        /* BULLSEYE ICON STYLE */
-        .bullseye-icon {
-            background: white;
-            border-radius: 50%;
-            border: 2px solid #fff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-        }
-
-        /* POPUPS */
-        .popup-card { min-width: 200px; padding: 5px; }
-        .popup-title { font-size: 18px; font-weight: bold; color: #2e7d32; margin-bottom: 5px; display: block; text-align: center; }
-        .popup-desc { font-size: 13px; color: #555; line-height: 1.4; margin-bottom: 12px; display: block; text-align: center; }
-        .btn-stack { display: flex; flex-direction: column; gap: 6px; }
-        .p-btn { padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 12px; display: block; border: none; cursor: pointer; text-align: center; }
-        .info-btn { background: #e8f5e9; color: #2e7d32 !important; border: 1px solid #2e7d32; }
-        .go-btn { background: #2e7d32; color: white !important; }
-        .copy-btn { background: #f5f5f5; color: #666; font-size: 10px; }
-
-        #loader { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2000; background: white; padding: 25px; border-radius: 15px; text-align: center; box-shadow: 0 0 30px rgba(0,0,0,0.2); display: none; width: 200px; font-weight: bold; }
-        .leaflet-control-search { display: none !important; }
+        html, body, #map { height: 100%; width: 100%; margin: 0; padding: 0; }
+        #ui-layer { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); z-index: 1000; width: 90%; display: flex; flex-direction: column; gap: 8px; align-items: center; }
+        .bar { background: white; padding: 8px 15px; border-radius: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); display: flex; gap: 5px; flex-wrap: wrap; justify-content: center; }
+        .btn { padding: 6px 12px; font-size: 11px; font-weight: bold; cursor: pointer; border: 1px solid #ddd; border-radius: 15px; background: white; }
+        .btn.active { background: #2e7d32; color: white; }
+        .bullseye-icon { background: white; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; font-size: 20px; border: 2px solid #fff; }
     </style>
 </head>
 <body>
 
-    <div id="loader">🌱 Growing Map...</div>
-    <div id="locate-btn" class="side-btn" onclick="locateUser()">🎯</div>
-    
-    <div id="county-bar">
-        <div id="search-container">
-            <input type="text" id="map-search-input" placeholder="Search spot...">
-            <span onclick="triggerSearch()">🔍</span>
+    <div id="ui-layer">
+        <div class="bar">
+            <div class="btn active" onclick="setCounty('all', this)">NI ALL</div>
+            <div class="btn" onclick="setCounty('tyrone', this)">TYRONE</div>
+            <div class="btn" onclick="setCounty('antrim', this)">ANTRIM</div>
         </div>
-        <button class="reset-btn" onclick="resetAll()">RESET ALL</button>
-        <div class="county-item active" id="county-all" onclick="setCounty('all', this)">NI ALL</div>
-        <div class="county-item" onclick="setCounty('tyrone', this)">TYRONE</div>
-        <div class="county-item" onclick="setCounty('antrim', this)">ANTRIM</div>
-        <div class="county-item" onclick="setCounty('down', this)">DOWN</div>
-        <div class="county-item" onclick="setCounty('north_down', this)">NORTH DOWN</div>
-        <div class="county-item" onclick="setCounty('fermanagh', this)">FERMANAGH</div>
-        <div class="county-item" onclick="setCounty('armagh', this)">ARMAGH</div>
-        <div class="county-item" onclick="setCounty('derry', this)">DERRY</div>
-    </div>
-
-    <div id="filter-bar">
-        <div class="filter-item active" id="filter-parks" onclick="setCategory('playparks', this)">
-            <img src="https://img.icons8.com/color/48/playground.png"><span>Parks</span>
-        </div>
-        <div class="filter-item" onclick="setCategory('museums', this)">
-            <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-museum-museum-flaticons-lineal-color-flat-icons-17.png"><span>Museums</span>
-        </div>
-        <div class="filter-item" onclick="setCategory('beach', this)">
-            <img src="https://img.icons8.com/doodle/48/beach--v1.png"><span>Beach</span>
-        </div>
-        <div class="filter-item" onclick="setCategory('animals', this)">
-            <img src="https://cdn-icons-png.flaticon.com/512/1998/1998671.png"><span>Animals</span>
-        </div>
-        <div class="filter-item" onclick="setCategory('indoors', this)">
-            <img src="https://img.icons8.com/fluency/48/children.png"><span>Indoor</span>
-        </div>
-        <div class="filter-item" onclick="setCategory('sports', this)">
-            <img src="https://cdn-icons-png.flaticon.com/512/857/857418.png"><span>Sports</span>
+        <div class="bar">
+            <div class="btn active" onclick="setCategory('all', this)">Show All</div>
+            <div class="btn" onclick="setCategory('playparks', this)">Parks</div>
+            <div class="btn" onclick="setCategory('indoors', this)">Indoor</div>
         </div>
     </div>
 
     <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
-    <script src="https://unpkg.com/leaflet-search@3.0.2/dist/leaflet-search.min.js"></script>
-    
     <script>
-        var map = L.map('map', { zoomControl: false, preferCanvas: true }).setView([54.60, -6.60], 8);
+        const map = L.map('map', { zoomControl: false }).setView([54.60, -6.60], 8);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-        
-        var currentCounty = 'all', currentCategory = 'playparks';
-        var markers = L.markerClusterGroup({ chunkedLoading: true, disableClusteringAtZoom: 16 }); 
-        var utilityLayer = L.layerGroup().addTo(map); // Static layer for utility pins
-        var searchControl;
 
-        const iconConfig = { iconSize: [32, 43], iconAnchor: [16, 43], popupAnchor: [0, -40], shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png', shadowSize: [43, 43] };
-        const mapIcons = {
-            'playparks': L.icon({ ...iconConfig, iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png' }),
-            'museums': L.icon({ ...iconConfig, iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png' }),
-            'beach': L.icon({ ...iconConfig, iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png' }),
-            'animals': L.icon({ ...iconConfig, iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png' }),
-            'indoors': L.icon({ ...iconConfig, iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png' }),
-            'sports': L.icon({ ...iconConfig, iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png' }),
-            'all': L.icon({ ...iconConfig, iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png' })
-        };
+        let masterData = [];
+        let currentCounty = 'all';
+        let currentCategory = 'all';
+        let layerGroup = L.layerGroup().addTo(map);
 
-        // DATA FOR THE BULLSEYE UTILITY PINS
-        const utilities = [
-            { lat: 54.63, lng: -6.65, name: "🎯 Request a Place!", desc: "Found a hidden gem we've missed? Click below to send us your suggestions!", url: "https://www.weeadventurers.com/contact", icon: "🎯" },
-            { lat: 54.58, lng: -6.75, name: "✨ About This Project", desc: "Welcome to the map! Click here to learn about our mission to help NI families explore.", url: "https://www.weeadventurers.com/about-me", icon: "✨" }
-        ];
+        // Update this URL to your GitHub map-data.json raw link
+        const dataUrl = 'https://raw.githubusercontent.com/Nooney96/map-data/main/map-data.json';
 
-        // ADD UTILITY PINS TO MAP
-        utilities.forEach(u => {
-            const bIcon = L.divIcon({
-                className: 'bullseye-icon',
-                html: u.icon,
-                iconSize: [44, 44],
-                iconAnchor: [22, 22]
+        fetch(dataUrl)
+            .then(res => res.json())
+            .then(data => {
+                masterData = data.features;
+                render();
             });
-            L.marker([u.lat, u.lng], { icon: bIcon }).bindPopup(`
-                <div class="popup-card">
-                    <span class="popup-title">${u.name}</span>
-                    <span class="popup-desc">${u.desc}</span>
-                    <a href="${u.url}" target="_blank" class="p-btn go-btn">LEARN MORE</a>
-                </div>
-            `).addTo(utilityLayer);
-        });
 
-        function locateUser() { map.locate({setView: true, maxZoom: 14}); }
-        window.copyToClipboard = function(coords) {
-            navigator.clipboard.writeText(coords).then(() => alert("Coordinates copied!"));
-        };
+        function render() {
+            layerGroup.clearLayers();
+            masterData.forEach(f => {
+                const p = f.properties;
+                const matchCounty = currentCounty === 'all' || p.county === currentCounty;
+                const matchCategory = currentCategory === 'all' || p.category === currentCategory;
 
-        function resetAll() {
-            document.getElementById('map-search-input').value = "";
-            setCounty('all', document.getElementById('county-all'));
-            setCategory('playparks', document.getElementById('filter-parks'));
+                if (p.type === 'utility' || (matchCounty && matchCategory)) {
+                    const icon = p.type === 'utility' ? 
+                        L.divIcon({ className: 'bullseye-icon', html: '🎯', iconSize: [40,40] }) :
+                        L.icon({ iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png', iconSize: [25, 41] });
+
+                    L.marker([f.geometry.coordinates[1], f.geometry.coordinates[0]], { icon: icon })
+                        .bindPopup(`<b>${p.name}</b><br>${p.description}<br><a href="${p.infoUrl}">Link</a>`)
+                        .addTo(layerGroup);
+                }
+            });
         }
 
         function setCounty(c, el) { 
             currentCounty = c; 
-            document.querySelectorAll('.county-item').forEach(i => i.classList.remove('active')); 
-            el.classList.add('active'); 
-            updateMap(); 
+            updateBtn(el, '.bar:first-child .btn'); 
+            render(); 
         }
-
         function setCategory(cat, el) { 
             currentCategory = cat; 
-            document.querySelectorAll('.filter-item').forEach(i => i.classList.remove('active')); 
+            updateBtn(el, '.bar:last-child .btn'); 
+            render(); 
+        }
+        function updateBtn(el, sel) { 
+            document.querySelectorAll(sel).forEach(b => b.classList.remove('active')); 
             el.classList.add('active'); 
-            updateMap(); 
         }
-
-        function triggerSearch() {
-            var val = document.getElementById('map-search-input').value;
-            if (searchControl) searchControl.searchText(val);
-        }
-
-        document.getElementById('map-search-input').addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') triggerSearch();
-        });
-
-        function updateMap() {
-            document.getElementById('loader').style.display = 'block';
-            markers.clearLayers();
-            if(searchControl) { map.removeControl(searchControl); }
-            
-            var fileName = currentCounty + '-' + currentCategory + '.geojson';
-            var url = 'https://raw.githubusercontent.com/Nooney96/map-data/main/' + fileName + '?v=' + Math.random();
-
-            fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    var geojsonLayer = L.geoJSON(data, {
-                        pointToLayer: (feature, latlng) => L.marker(latlng, {icon: mapIcons[currentCategory] || mapIcons['all']}),
-                        onEachFeature: (feature, layer) => {
-                            var p = feature.properties;
-                            var lat = layer.getLatLng().lat, lng = layer.getLatLng().lng;
-                            var name = p.name || "Spot", desc = p.description || "Click below for details!";
-                            var gUrl = "https://www.google.com/maps/dir/?api=1&destination=" + lat + "," + lng;
-                            
-                            var content = `
-                                <div class="popup-card">
-                                    <span class="popup-title">${name}</span>
-                                    <span class="popup-desc">${desc}</span>
-                                    <div class="btn-stack">
-                                        ${p.infoUrl ? `<a href="${p.infoUrl}" target="_blank" class="p-btn info-btn">ℹ️ VIEW DETAILS</a>` : ''}
-                                        <a href="${gUrl}" target="_blank" class="p-btn go-btn">🚗 DIRECTIONS</a>
-                                        <button onclick="copyToClipboard('${lat}, ${lng}')" class="p-btn copy-btn">📋 COPY COORDS</button>
-                                    </div>
-                                </div>`;
-                            layer.bindPopup(content);
-                        }
-                    });
-
-                    markers.addLayer(geojsonLayer);
-                    map.addLayer(markers);
-                    
-                    searchControl = new L.Control.Search({
-                        layer: markers, propertyName: 'name', marker: false, initial: false, 
-                        moveToLocation: function(latlng) { map.setView(latlng, 15); }
-                    });
-                    searchControl.on('search:locationfound', function(e) { e.layer.openPopup(); });
-                    map.addControl(searchControl);
-
-                    if (markers.getLayers().length > 0) map.fitBounds(markers.getBounds(), { padding: [70, 70] });
-                    document.getElementById('loader').style.display = 'none';
-                })
-                .catch(() => document.getElementById('loader').style.display = 'none');
-        }
-        window.onload = updateMap;
     </script>
 </body>
 </html>
