@@ -2,40 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Wee Adventurers | Map Admin</title>
+    <title>Wee Adventurers | Map Admin Generator</title>
     <style>
         body { font-family: 'Segoe UI', sans-serif; background: #f4f7f6; padding: 40px; color: #333; }
-        .container { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        h2 { color: #2e7d32; text-align: center; }
+        .container { max-width: 650px; margin: 0 auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        h2 { color: #2e7d32; text-align: center; margin-top: 0; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
         label { display: block; margin: 15px 0 5px; font-weight: bold; font-size: 14px; }
-        input, textarea, select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
-        button { width: 100%; padding: 15px; background: #2e7d32; color: white; border: none; border-radius: 8px; font-weight: bold; margin-top: 20px; cursor: pointer; }
-        #output-container { margin-top: 30px; display: none; }
-        pre { background: #272822; color: #f8f8f2; padding: 15px; border-radius: 8px; overflow-x: auto; font-size: 12px; }
-        .copy-hint { font-size: 12px; color: #666; margin-bottom: 10px; }
+        input, textarea, select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; font-family: inherit; }
+        .full-width { grid-column: span 2; }
+        button { width: 100%; padding: 15px; background: #2e7d32; color: white; border: none; border-radius: 8px; font-weight: bold; margin-top: 25px; cursor: pointer; font-size: 16px; transition: background 0.3s; }
+        button:hover { background: #1b5e20; }
+        #output-container { margin-top: 30px; display: none; border-top: 2px dashed #ddd; padding-top: 20px; }
+        pre { background: #272822; color: #f8f8f2; padding: 15px; border-radius: 8px; overflow-x: auto; font-size: 12px; line-height: 1.5; }
+        .copy-hint { font-size: 14px; color: #2e7d32; font-weight: bold; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <h2>🌱 New Location Generator</h2>
+    <p style="text-align: center; font-size: 13px; color: #666;">Fill this in to get the exact code for your map-data.json file</p>
     
-    <label>Location Name</label>
-    <input type="text" id="name" placeholder="e.g. Gortin Glen Forest Park">
+    <div class="grid">
+        <div class="full-width">
+            <label>Location Name</label>
+            <input type="text" id="name" placeholder="e.g. Gortin Glen Forest Park">
+        </div>
 
-    <label>Coordinates (Latitude, Longitude)</label>
-    <input type="text" id="coords" placeholder="54.683, -7.246">
+        <div>
+            <label>County</label>
+            <select id="county">
+                <option value="antrim">Antrim</option>
+                <option value="armagh">Armagh</option>
+                <option value="derry">Derry</option>
+                <option value="down">Down</option>
+                <option value="north down">North Down</option>
+                <option value="fermanagh">Fermanagh</option>
+                <option value="tyrone">Tyrone</option>
+            </select>
+        </div>
 
-    <label>Description</label>
-    <textarea id="desc" rows="3" placeholder="Describe the spot..."></textarea>
+        <div>
+            <label>Category</label>
+            <select id="category">
+                <option value="playparks">Parks</option>
+                <option value="indoors">Indoor Play</option>
+                <option value="animals">Animals/Farms</option>
+                <option value="beaches">Beaches</option>
+                <option value="museums">Museums/History</option>
+                <option value="sports">Sports/Activity</option>
+            </select>
+        </div>
 
-    <label>Website Link (infoUrl)</label>
-    <input type="text" id="url" placeholder="https://www.weeadventurers.com/post/...">
+        <div class="full-width">
+            <label>Coordinates (Latitude, Longitude)</label>
+            <input type="text" id="coords" placeholder="Copy from Google Maps, e.g. 54.683, -7.246">
+        </div>
 
-    <button onclick="generateCode()">GENERATE GEOJSON CODE</button>
+        <div class="full-width">
+            <label>Website Link (infoUrl)</label>
+            <input type="text" id="url" placeholder="https://www.weeadventurers.com/post/...">
+        </div>
+
+        <div class="full-width">
+            <label>Description</label>
+            <textarea id="desc" rows="3" placeholder="A short blurb about the spot..."></textarea>
+        </div>
+    </div>
+
+    <button onclick="generateCode()">GENERATE CODE SNIPPET</button>
 
     <div id="output-container">
-        <p class="copy-hint">✅ Success! Copy the code below and paste it into your GitHub file:</p>
+        <p class="copy-hint">✅ Ready! Paste this at the bottom of your "features" list:</p>
         <pre id="output"></pre>
     </div>
 </div>
@@ -43,12 +82,18 @@
 <script>
     function generateCode() {
         const name = document.getElementById('name').value;
+        const county = document.getElementById('county').value;
+        const category = document.getElementById('category').value;
         const coordsRaw = document.getElementById('coords').value.split(',');
         const desc = document.getElementById('desc').value;
         const url = document.getElementById('url').value;
 
-        if(coordsRaw.length < 2) { alert("Please enter valid coordinates!"); return; }
+        if(!name || coordsRaw.length < 2) { 
+            alert("Please provide at least a Name and valid Coordinates!"); 
+            return; 
+        }
 
+        // Clean up coordinates
         const lat = parseFloat(coordsRaw[0].trim());
         const lng = parseFloat(coordsRaw[1].trim());
 
@@ -56,18 +101,24 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [lng, lat]
+                "coordinates": [lng, lat] // [Longitude, Latitude] for GeoJSON
             },
             "properties": {
                 "name": name,
                 "description": desc,
-                "infoUrl": url
+                "infoUrl": url,
+                "county": county,
+                "category": category
             }
         };
 
         // Display with comma for easy appending
-        document.getElementById('output').textContent = JSON.stringify(geojsonSnippet, null, 4) + ",";
+        const outputField = document.getElementById('output');
+        outputField.textContent = JSON.stringify(geojsonSnippet, null, 4) + ",";
         document.getElementById('output-container').style.display = 'block';
+        
+        // Auto-scroll to output
+        document.getElementById('output-container').scrollIntoView({ behavior: 'smooth' });
     }
 </script>
 
