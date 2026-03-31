@@ -1,22 +1,13 @@
 {
   "type": "FeatureCollection",
   "features": [
-    {
-      "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-6.65, 54.63] },
-      "properties": {
-        "name": "🎯 Request a Place!",
-        "description": "Know a spot we've missed? Let us know!",
-        "infoUrl": "https://www.weeadventurers.com/contact",
-        "type": "utility"
-      }
-    },
+   
     {
       "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [-6.645457, 54.648736] },
       "properties": {
         "name": "Littlebridge Farm Fresh Ltd",
-        "description": "A local farm favorite known for fresh produce and a friendly atmosphere.",
+        "description": "A local farm favourite known for fresh produce and a friendly atmosphere.",
         "infoUrl": "https://www.weeadventurers.com/post/little-bridge-farm-fresh",
         "category": "animals",
         "county": "tyrone"
