@@ -12,10 +12,8 @@
     <style>
         html, body, #map { height: 100%; width: 100%; margin: 0; padding: 0; background: #fff; font-family: 'Segoe UI', sans-serif; }
         
-        /* Main UI Container */
-        #ui-layer { position: absolute; top: 15px; left: 50%; transform: translateX(-50%); z-index: 1000; width: 98%; max-width: 1200px; display: flex; flex-direction: column; gap: 10px; align-items: center; pointer-events: none; }
+        #ui-layer { position: absolute; top: 15px; left: 50%; transform: translateX(-50%); z-index: 1000; width: 98%; max-width: 1250px; display: flex; flex-direction: column; gap: 10px; align-items: center; pointer-events: none; }
         
-        /* Top Navigation Bar */
         .bar { background: rgba(255,255,255,0.98); padding: 8px 12px; border-radius: 40px; box-shadow: 0 4px 25px rgba(0,0,0,0.15); display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; align-items: center; pointer-events: auto; }
         
         #search-box { display: flex; align-items: center; background: #f8f9fa; border-radius: 25px; padding: 4px 12px; border: 1px solid #eee; }
@@ -26,16 +24,15 @@
         .btn-reset { background: #e53935; color: white; border: none; }
         .btn-special { background: #f8f9fa; border: 1px solid #ddd; }
 
-        /* Bottom Category Bar */
-        #bottom-bar { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 1000; background: white; padding: 10px 20px; border-radius: 50px; box-shadow: 0 -5px 25px rgba(0,0,0,0.1); display: flex; gap: 20px; align-items: center; pointer-events: auto; }
-        .cat-item { display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: pointer; opacity: 0.4; transition: 0.3s; min-width: 50px; }
+        #bottom-bar { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 1000; background: white; padding: 10px 20px; border-radius: 50px; box-shadow: 0 -5px 25px rgba(0,0,0,0.1); display: flex; gap: 15px; align-items: center; pointer-events: auto; max-width: 95%; overflow-x: auto; }
+        .cat-item { display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: pointer; opacity: 0.4; transition: 0.3s; min-width: 55px; }
         .cat-item img { width: 26px; height: 26px; }
-        .cat-item span { font-size: 9px; font-weight: 800; color: #555; }
+        .cat-item span { font-size: 8px; font-weight: 800; color: #555; text-align: center; }
         .cat-item.active { opacity: 1; transform: scale(1.1); }
 
-        /* Popups */
         .bullseye-icon { background: white; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; font-size: 24px; border: 2px solid #fff; }
         .popup-card { text-align: center; min-width: 200px; }
+        .popup-title { font-size: 18px; font-weight: bold; color: #2e7d32; display: block; margin-bottom: 5px; }
         .go-btn { display: block; background: #2e7d32; color: white !important; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 10px; font-size: 12px; }
     </style>
 </head>
@@ -51,13 +48,13 @@
             <button class="btn active" onclick="filterCounty('all', this)">NI ALL</button>
             <button class="btn" onclick="filterCounty('antrim', this)">ANTRIM</button>
             <button class="btn" onclick="filterCounty('armagh', this)">ARMAGH</button>
-            <button class="btn" onclick="filterCounty('belfast', this)">BELFAST</button>
             <button class="btn" onclick="filterCounty('derry', this)">DERRY</button>
             <button class="btn" onclick="filterCounty('down', this)">DOWN</button>
+            <button class="btn" onclick="filterCounty('north down', this)">NORTH DOWN</button>
             <button class="btn" onclick="filterCounty('fermanagh', this)">FERMANAGH</button>
             <button class="btn" onclick="filterCounty('tyrone', this)">TYRONE</button>
-            <button class="btn btn-special" onclick="alert('Open Request Marker')">🎯 REQUEST</button>
-            <button class="btn btn-special" onclick="alert('Open About Marker')">✨ ABOUT</button>
+            <button class="btn btn-special" onclick="findSpecial('Request')">🎯 REQUEST</button>
+            <button class="btn btn-special" onclick="findSpecial('About')">✨ ABOUT</button>
         </div>
     </div>
 
@@ -77,6 +74,18 @@
         <div class="cat-item" onclick="filterCategory('animals', this)">
             <img src="https://img.icons8.com/color/48/pet-commands-summon.png" />
             <span>ANIMALS</span>
+        </div>
+        <div class="cat-item" onclick="filterCategory('beaches', this)">
+            <img src="https://img.icons8.com/color/48/beach.png" />
+            <span>BEACH</span>
+        </div>
+        <div class="cat-item" onclick="filterCategory('museums', this)">
+            <img src="https://img.icons8.com/color/48/museum.png" />
+            <span>MUSEUM</span>
+        </div>
+        <div class="cat-item" onclick="filterCategory('sports', this)">
+            <img src="https://img.icons8.com/color/48/trophy.png" />
+            <span>SPORTS</span>
         </div>
     </div>
 
@@ -110,21 +119,37 @@
                 const rowCounty = (p.county || "").toLowerCase().trim();
                 const rowCategory = (p.category || "").toLowerCase().trim();
 
-                if ((searchTerm === "" || name.includes(searchTerm.toLowerCase())) &&
-                    (currentCounty === 'all' || rowCounty === currentCounty) &&
-                    (currentCategory === 'all' || rowCategory === currentCategory || p.type === 'utility')) {
-                    
+                const matchesSearch = searchTerm === "" || name.includes(searchTerm.toLowerCase());
+                const matchesCounty = currentCounty === 'all' || rowCounty === currentCounty;
+                const matchesCategory = currentCategory === 'all' || rowCategory === currentCategory;
+
+                if (matchesSearch && (p.type === 'utility' || (matchesCounty && matchesCategory))) {
                     let icon;
                     if (p.type === 'utility') {
                         icon = L.divIcon({ className: 'bullseye-icon', html: p.name.split(' ')[0], iconSize: [46,46], iconAnchor: [23,23] });
                     } else {
-                        let color = rowCategory === 'indoors' ? 'red' : rowCategory === 'animals' ? 'orange' : 'green';
-                        icon = L.icon({ iconUrl: `https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-${color}.png`, iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34] });
+                        let colorMap = { 'indoors': 'red', 'animals': 'orange', 'beaches': 'blue', 'museums': 'violet', 'sports': 'gold' };
+                        let color = colorMap[rowCategory] || 'green';
+                        icon = L.icon({ 
+                            iconUrl: `https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-${color}.png`, 
+                            iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34] 
+                        });
                     }
 
-                    L.marker([coords[1], coords[0]], { icon: icon })
-                        .bindPopup(`<div class="popup-card"><b class="popup-title">${p.name}</b><p>${p.description}</p><a href="${p.infoUrl}" target="_blank" class="go-btn">DETAILS</a></div>`)
-                        .addTo(markers);
+                    const marker = L.marker([coords[1], coords[0]], { icon: icon });
+                    marker.bindPopup(`<div class="popup-card"><b class="popup-title">${p.name}</b><p>${p.description}</p><a href="${p.infoUrl}" target="_blank" class="go-btn">DETAILS</a></div>`);
+                    
+                    marker.customName = p.name;
+                    markers.addLayer(marker);
+                }
+            });
+        }
+
+        function findSpecial(keyword) {
+            markers.eachLayer(layer => {
+                if (layer.customName && layer.customName.includes(keyword)) {
+                    map.setView(layer.getLatLng(), 12);
+                    layer.openPopup();
                 }
             });
         }
