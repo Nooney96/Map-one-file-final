@@ -3,20 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wee Adventurers NI</title>
+    <title>Wee Adventurers | NI Map</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
-        html, body, #map { height: 100%; width: 100%; margin: 0; padding: 0; }
-        #ui-layer { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); z-index: 1000; width: 90%; display: flex; flex-direction: column; gap: 8px; align-items: center; }
+        html, body, #map { height: 100%; width: 100%; margin: 0; padding: 0; background: #fff; }
+        #ui { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); z-index: 1000; width: 90%; display: flex; flex-direction: column; gap: 8px; align-items: center; }
         .bar { background: white; padding: 8px 15px; border-radius: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); display: flex; gap: 5px; flex-wrap: wrap; justify-content: center; }
-        .btn { padding: 6px 12px; font-size: 11px; font-weight: bold; cursor: pointer; border: 1px solid #ddd; border-radius: 15px; background: white; }
-        .btn.active { background: #2e7d32; color: white; }
-        .bullseye-icon { background: white; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; font-size: 20px; border: 2px solid #fff; }
+        .btn { padding: 6px 12px; font-size: 11px; font-weight: bold; border: 1px solid #ddd; border-radius: 15px; background: white; cursor: pointer; }
+        .btn.active { background: #2e7d32; color: white; border-color: #2e7d32; }
     </style>
 </head>
 <body>
 
-    <div id="ui-layer">
+    <div id="ui">
         <div class="bar">
             <div class="btn active" onclick="setCounty('all', this)">NI ALL</div>
             <div class="btn" onclick="setCounty('tyrone', this)">TYRONE</div>
@@ -33,56 +32,60 @@
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
+        // 1. Setup Map
         const map = L.map('map', { zoomControl: false }).setView([54.60, -6.60], 8);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
         let masterData = [];
         let currentCounty = 'all';
         let currentCategory = 'all';
-        let layerGroup = L.layerGroup().addTo(map);
+        let markers = L.layerGroup().addTo(map);
 
-        // Update this URL to your GitHub map-data.json raw link
-        const dataUrl = 'https://raw.githubusercontent.com/Nooney96/map-data/main/map-data.json';
+        // 2. THE CORRECT LINK TO YOUR NEW REPO
+        const dataUrl = 'https://raw.githubusercontent.com/Nooney96/Map-one-file-final/main/map-data.json';
 
         fetch(dataUrl)
             .then(res => res.json())
             .then(data => {
                 masterData = data.features;
                 render();
-            });
+            })
+            .catch(err => console.error("Error loading JSON:", err));
 
+        // 3. Logic to show markers
         function render() {
-            layerGroup.clearLayers();
+            markers.clearLayers();
             masterData.forEach(f => {
                 const p = f.properties;
-                const matchCounty = currentCounty === 'all' || p.county === currentCounty;
-                const matchCategory = currentCategory === 'all' || p.category === currentCategory;
+                const coords = f.geometry.coordinates;
 
+                // Match based on button clicks
+                const matchCounty = currentCounty === 'all' || (p.county && p.county.toLowerCase() === currentCounty);
+                const matchCategory = currentCategory === 'all' || (p.category && p.category.toLowerCase() === currentCategory);
+
+                // Show if it's a utility (🎯) OR matches our filters
                 if (p.type === 'utility' || (matchCounty && matchCategory)) {
-                    const icon = p.type === 'utility' ? 
-                        L.divIcon({ className: 'bullseye-icon', html: '🎯', iconSize: [40,40] }) :
-                        L.icon({ iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png', iconSize: [25, 41] });
-
-                    L.marker([f.geometry.coordinates[1], f.geometry.coordinates[0]], { icon: icon })
-                        .bindPopup(`<b>${p.name}</b><br>${p.description}<br><a href="${p.infoUrl}">Link</a>`)
-                        .addTo(layerGroup);
+                    L.marker([coords[1], coords[0]])
+                        .bindPopup(`<b>${p.name}</b><br>${p.description}`)
+                        .addTo(markers);
                 }
             });
         }
 
+        // 4. Button Functions
         function setCounty(c, el) { 
-            currentCounty = c; 
-            updateBtn(el, '.bar:first-child .btn'); 
+            currentCounty = c.toLowerCase(); 
+            updateBtns(el, '.bar:first-child .btn'); 
             render(); 
         }
         function setCategory(cat, el) { 
-            currentCategory = cat; 
-            updateBtn(el, '.bar:last-child .btn'); 
+            currentCategory = cat.toLowerCase(); 
+            updateBtns(el, '.bar:last-child .btn'); 
             render(); 
         }
-        function updateBtn(el, sel) { 
-            document.querySelectorAll(sel).forEach(b => b.classList.remove('active')); 
-            el.classList.add('active'); 
+        function updateBtns(el, sel) {
+            document.querySelectorAll(sel).forEach(b => b.classList.remove('active'));
+            el.classList.add('active');
         }
     </script>
 </body>
