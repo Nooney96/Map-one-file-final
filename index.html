@@ -30,9 +30,12 @@
         .cat-item span { font-size: 8px; font-weight: 800; color: #555; text-align: center; }
         .cat-item.active { opacity: 1; transform: scale(1.1); }
 
-        .popup-card { text-align: center; min-width: 200px; }
+        /* Popup Styling */
+        .popup-card { text-align: center; min-width: 220px; padding: 5px; }
         .popup-title { font-size: 18px; font-weight: bold; color: #2e7d32; display: block; margin-bottom: 5px; }
-        .go-btn { display: block; background: #2e7d32; color: white !important; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 10px; font-size: 12px; }
+        .go-btn { display: block; background: #2e7d32; color: white !important; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 8px; font-size: 12px; border: none; width: 100%; cursor: pointer; }
+        .go-btn-secondary { background: #e8f5e9; color: #2e7d32 !important; border: 1px solid #2e7d32; }
+        .go-btn-outline { background: #f5f5f5; color: #444 !important; border: 1px solid #ddd; }
     </style>
 </head>
 <body>
@@ -102,6 +105,7 @@
         let currentCategory = 'all';
         const markers = L.markerClusterGroup({ disableClusteringAtZoom: 16 }).addTo(map);
 
+        // Update this URL if your repository name changes
         const dataUrl = 'https://raw.githubusercontent.com/Nooney96/Map-one-file-final/main/map-data.json';
 
         fetch(dataUrl).then(res => res.json()).then(data => {
@@ -115,7 +119,6 @@
                 const p = f.properties;
                 const coords = f.geometry.coordinates;
 
-                // Skip utility markers (the ones with the 🎯) as we are handling them via buttons now
                 if (p.type === 'utility') return;
 
                 const name = (p.name || "").toLowerCase();
@@ -135,8 +138,19 @@
                         iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34] 
                     });
 
+                    const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${coords[1]},${coords[0]}`;
+                    const coordString = `${coords[1]}, ${coords[0]}`;
+
                     L.marker([coords[1], coords[0]], { icon: icon })
-                        .bindPopup(`<div class="popup-card"><b class="popup-title">${p.name}</b><p>${p.description}</p><a href="${p.infoUrl}" target="_blank" class="go-btn">DETAILS</a></div>`)
+                        .bindPopup(`
+                            <div class="popup-card">
+                                <b class="popup-title">${p.name}</b>
+                                <p>${p.description || ''}</p>
+                                <a href="${p.infoUrl}" target="_blank" class="go-btn go-btn-secondary">ℹ️ VIEW DETAILS</a>
+                                <a href="${googleMapsUrl}" target="_blank" class="go-btn">🚗 DIRECTIONS</a>
+                                <button onclick="copyToClipboard('${coordString}')" class="go-btn go-btn-outline">📋 COPY COORDS</button>
+                            </div>
+                        `)
                         .addTo(markers);
                 }
             });
@@ -144,10 +158,16 @@
 
         function handleSpecial(type) {
             if (type === 'Request') {
-                window.open("weeadventurers@yahoo.com", "_blank");
+                window.open("https://www.weeadventurers.com/contact", "_blank");
             } else if (type === 'About') {
                 alert("Wee Adventurers NI\n\nFind the best playparks, indoor play, and family farms in NI! Search by county or category to plan your next adventure.");
             }
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Coordinates copied to clipboard!");
+            });
         }
 
         function handleSearch(val) { renderMap(val); }
