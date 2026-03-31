@@ -664,9 +664,9 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-6.91155, 54.7226] },
+      "geometry": { "type": "Point", "coordinates": [-7.0508458, 54.7357233] },
       "properties": {
-        "name": "Davagh Road",
+        "name": "Davagh Forest",
         "description": "Home to the Dark Sky Observatory. Features wooded walks and world-class mountain biking trails.",
         "infoUrl": "https://www.weeadventurers.com/post/davagh-forest",
         "category": "playparks",
