@@ -11,84 +11,31 @@
 
     <style>
         html, body, #map { height: 100%; width: 100%; margin: 0; padding: 0; background: #fff; font-family: 'Segoe UI', sans-serif; }
-        
         #ui-layer { position: absolute; top: 15px; left: 50%; transform: translateX(-50%); z-index: 1000; width: 98%; max-width: 1250px; display: flex; flex-direction: column; gap: 10px; align-items: center; pointer-events: none; }
-        
         .bar { background: rgba(255,255,255,0.98); padding: 8px 12px; border-radius: 40px; box-shadow: 0 4px 25px rgba(0,0,0,0.15); display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; align-items: center; pointer-events: auto; }
-        
         #search-box { display: flex; align-items: center; background: #f8f9fa; border-radius: 25px; padding: 4px 12px; border: 1px solid #eee; }
         #search-box input { border: none; background: none; outline: none; font-size: 13px; width: 110px; padding: 6px; }
-
         .btn { padding: 8px 14px; font-size: 10px; font-weight: 800; cursor: pointer; border: 1px solid #efefef; border-radius: 20px; background: white; color: #444; transition: 0.2s; text-transform: uppercase; }
         .btn.active { background: #2e7d32; color: white; border-color: #2e7d32; box-shadow: 0 2px 8px rgba(46, 125, 50, 0.3); }
         .btn-reset { background: #e53935; color: white; border: none; }
         .btn-special { background: #f8f9fa; border: 1px solid #ddd; }
-
         #bottom-bar { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 1000; background: white; padding: 10px 20px; border-radius: 50px; box-shadow: 0 -5px 25px rgba(0,0,0,0.1); display: flex; gap: 15px; align-items: center; pointer-events: auto; max-width: 95%; overflow-x: auto; }
         .cat-item { display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: pointer; opacity: 0.4; transition: 0.3s; min-width: 55px; }
         .cat-item img { width: 26px; height: 26px; }
         .cat-item span { font-size: 8px; font-weight: 800; color: #555; text-align: center; }
         .cat-item.active { opacity: 1; transform: scale(1.1); }
-
-        /* Popup Styling */
         .popup-card { text-align: center; min-width: 220px; padding: 5px; }
         .popup-title { font-size: 18px; font-weight: bold; color: #2e7d32; display: block; margin-bottom: 5px; }
-        
-        .go-btn { 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            text-align: center;
-            gap: 6px;
-            background: #2e7d32; 
-            color: white !important; 
-            padding: 10px 4px; 
-            border-radius: 8px; 
-            text-decoration: none; 
-            font-weight: bold; 
-            margin-top: 8px; 
-            font-size: 12px; 
-            border: none; 
-            width: 100%; 
-            cursor: pointer;
-            box-sizing: border-box;
-        }
+        .go-btn { display: flex; align-items: center; justify-content: center; text-align: center; gap: 6px; background: #2e7d32; color: white !important; padding: 10px 4px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 8px; font-size: 12px; border: none; width: 100%; cursor: pointer; box-sizing: border-box; }
         .go-btn-secondary { background: #e8f5e9; color: #2e7d32 !important; border: 1px solid #2e7d32; }
         .go-btn-outline { background: #f5f5f5; color: #444 !important; border: 1px solid #ddd; }
 
-        /* --- NEW MODAL STYLING --- */
-        #custom-modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0; top: 0;
-            width: 100%; height: 100%;
-            background-color: rgba(0,0,0,0.5);
-            align-items: center;
-            justify-content: center;
-        }
-        .modal-content {
-            background-color: white;
-            padding: 25px;
-            border-radius: 20px;
-            width: 90%;
-            max-width: 400px;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-            position: relative;
-        }
+        /* Custom Modal Styling */
+        #custom-modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); align-items: center; justify-content: center; pointer-events: auto; }
+        .modal-content { background-color: white; padding: 25px; border-radius: 20px; width: 90%; max-width: 400px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
         .modal-title { font-size: 20px; font-weight: bold; color: #2e7d32; margin-bottom: 15px; display: block; }
         .modal-text { font-size: 14px; line-height: 1.6; color: #444; margin-bottom: 20px; display: block; }
-        .modal-close {
-            background: #2e7d32;
-            color: white;
-            padding: 10px 25px;
-            border-radius: 25px;
-            border: none;
-            font-weight: bold;
-            cursor: pointer;
-            font-size: 14px;
-        }
+        .modal-close { background: #2e7d32; color: white; padding: 10px 25px; border-radius: 25px; border: none; font-weight: bold; cursor: pointer; font-size: 14px; }
     </style>
 </head>
 <body>
@@ -155,7 +102,7 @@
     <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
 
     <script>
         const map = L.map('map', { zoomControl: false }).setView([54.60, -6.60], 8);
@@ -182,12 +129,15 @@
 
                 const name = (p.name || "").toLowerCase();
                 const rowCounty = (p.county || "").toLowerCase().trim();
-                const rowCategory = (p.category || "").toLowerCase().trim();
+                
+                // --- FIX: Use existing category if present, otherwise default to playparks ---
+                const rowCategory = (p.category || "playparks").toLowerCase().trim();
 
-                if ((searchTerm === "" || name.includes(searchTerm.toLowerCase())) &&
-                    (currentCounty === 'all' || rowCounty === currentCounty) &&
-                    (currentCategory === 'all' || rowCategory === currentCategory)) {
-                    
+                const matchesSearch = searchTerm === "" || name.includes(searchTerm.toLowerCase());
+                const matchesCounty = currentCounty === 'all' || rowCounty === currentCounty;
+                const matchesCategory = currentCategory === 'all' || rowCategory === currentCategory;
+
+                if (matchesSearch && matchesCounty && matchesCategory) {
                     let colorMap = { 'indoors': 'red', 'animals': 'orange', 'beaches': 'blue', 'museums': 'violet', 'sports': 'gold' };
                     let color = colorMap[rowCategory] || 'green';
                     const icon = L.icon({ 
@@ -213,7 +163,6 @@
             });
         }
 
-        // --- UPDATED SPECIAL HANDLER FOR MODAL ---
         function handleSpecial(type) {
             if (type === 'Request') {
                 window.open("https://www.weeadventurers.com/about-me", "_blank");
