@@ -151,7 +151,7 @@
         "description": "Located in Holywood, this sandy beach has a brilliant large playpark and plenty of green space for a family picnic.",
         "infoUrl": "https://www.weeadventurers.com/post/seapark-bay",
         "category": "beaches",
-        "county": "down"
+        "county": "north down"
       }
     },
     {
@@ -162,7 +162,7 @@
         "description": "Two beautiful beaches tucked away in a country park with forest walks, a waterfall, and a modern visitor center.",
         "infoUrl": "https://www.weeadventurers.com/post/helen-s-bay",
         "category": "beaches",
-        "county": "down"
+        "county": "north down"
       }
     },
     {
@@ -811,7 +811,7 @@
         "description": "Beach meets park! A large grassy area with a seaside playground and views across Belfast Lough.",
         "infoUrl": "https://www.weeadventurers.com/north-down",
         "category": "playparks",
-        "county": "down"
+        "county": "north down"
       }
     },
     {
@@ -983,7 +983,7 @@
       "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [-6.385044, 54.495653] },
       "properties": {
-        "name": "Oxford Island Park",
+        "name": "Oxford Island",
         "description": "Nature reserve on Lough Neagh. Great for bird watching, woodland walks, and a lakeside picnic.",
         "infoUrl": "https://www.weeadventurers.com/armagh",
         "category": "playparks",
@@ -1016,7 +1016,7 @@
       "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [-6.381184, 54.464589] },
       "properties": {
-        "name": "Tannaghmore Gardens Park",
+        "name": "Tannaghmore Gardens",
         "description": "Farm animals, rare breeds, and a massive playground. A brilliant free day out for the whole family.",
         "infoUrl": "https://www.weeadventurers.com/post/tannaghmore-gardens",
         "category": "playparks",
