@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wee Adventurers | Admin Generator</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f4f7f6; color: #333; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        h2 { color: #2e7d32; text-align: center; margin-top: 0; }
+        label { display: block; margin-top: 15px; font-weight: bold; font-size: 14px; }
+        input, select, textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
+        .checkbox-group { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; background: #f9f9f9; padding: 15px; border-radius: 8px; }
+        .checkbox-item { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+        .checkbox-item input { width: auto; margin: 0; }
+        button { width: 100%; padding: 15px; background: #2e7d32; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 20px; font-size: 16px; }
+        #output-area { margin-top: 25px; display: none; }
+        pre { background: #222; color: #7cfc00; padding: 15px; border-radius: 8px; overflow-x: auto; font-size: 12px; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Add New Location</h2>
+    
+    <label>Location Name</label>
+    <input type="text" id="name" placeholder="e.g. Castlewellan Forest Park">
+
+    <label>Description</label>
+    <textarea id="desc" rows="2" placeholder="Briefly describe the spot..."></textarea>
+
+    <div style="display:flex; gap:10px;">
+        <div style="flex:1;">
+            <label>County</label>
+            <select id="county">
+                <option value="Antrim">Antrim</option>
+                <option value="Armagh">Armagh</option>
+                <option value="Derry">L/Derry</option>
+                <option value="Down">Down</option>
+                <option value="North Down">North Down</option>
+                <option value="Fermanagh">Fermanagh</option>
+                <option value="Tyrone">Tyrone</option>
+            </select>
+        </div>
+        <div style="flex:1;">
+            <label>Category</label>
+            <select id="category">
+                <option value="playparks">Playpark</option>
+                <option value="indoors">Indoor Play</option>
+                <option value="animals">Animals/Farm</option>
+                <option value="beaches">Beach</option>
+                <option value="museums">Museum/Culture</option>
+                <option value="sports">Sports/Active</option>
+            </select>
+        </div>
+    </div>
+
+    <div style="display:flex; gap:10px;">
+        <div style="flex:1;">
+            <label>Price Info</label>
+            <input type="text" id="price" placeholder="e.g. Free or £5">
+        </div>
+        <div style="flex:1;">
+            <label>Age Range</label>
+            <input type="text" id="ages" placeholder="e.g. 0-12 yrs">
+        </div>
+    </div>
+
+    <label>Facilities & Accessibility</label>
+    <div class="checkbox-group">
+        <div class="checkbox-item"><input type="checkbox" id="parking"> 🚗 Parking</div>
+        <div class="checkbox-item"><input type="checkbox" id="toilets"> 🚽 Toilets</div>
+        <div class="checkbox-item"><input type="checkbox" id="cafe"> ☕ Cafe</div>
+        <div class="checkbox-item"><input type="checkbox" id="accessible"> ♿ Accessible</div>
+    </div>
+
+    <label>Coordinates (Latitude, Longitude)</label>
+    <input type="text" id="coords" placeholder="54.258, -5.942">
+
+    <label>Website/Info URL</label>
+    <input type="text" id="infoUrl" placeholder="https://...">
+
+    <button onclick="generateJSON()">GENERATE CODE</button>
+
+    <div id="output-area">
+        <label>Copy this into your map-data.json:</label>
+        <pre id="output"></pre>
+        <small style="color: #666;">Note: Remember to add a comma after the previous entry in your JSON file!</small>
+    </div>
+</div>
+
+<script>
+function generateJSON() {
+    const latlng = document.getElementById('coords').value.split(',');
+    if(latlng.length !== 2) { alert("Please enter valid coordinates"); return; }
+
+    const entry = {
+        "type": "Feature",
+        "properties": {
+            "name": document.getElementById('name').value,
+            "description": document.getElementById('desc').value,
+            "county": document.getElementById('county').value,
+            "category": document.getElementById('category').value,
+            "price": document.getElementById('price').value,
+            "ages": document.getElementById('ages').value,
+            "parking": document.getElementById('parking').checked,
+            "toilets": document.getElementById('toilets').checked,
+            "cafe": document.getElementById('cafe').checked,
+            "accessible": document.getElementById('accessible').checked,
+            "infoUrl": document.getElementById('infoUrl').value
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [parseFloat(latlng[1].trim()), parseFloat(latlng[0].trim())]
+        }
+    };
+
+    document.getElementById('output').textContent = JSON.stringify(entry, null, 4);
+    document.getElementById('output-area').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
