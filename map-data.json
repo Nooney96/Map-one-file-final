@@ -9,7 +9,13 @@
         "description": "A local farm favourite known for fresh produce and a friendly atmosphere.",
         "infoUrl": "https://www.weeadventurers.com/post/little-bridge-farm-fresh",
         "category": "animals",
-        "county": "tyrone"
+        "county": "tyrone",
+        "price": "Free Entry",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": false,
+        "cafe": false,
+        "accessible": true
       }
     },
     {
@@ -20,7 +26,13 @@
         "description": "A great open farm experience where kids can get up close with various farm animals.",
         "infoUrl": "https://www.weeadventurers.com/post/grangewater-open-farm",
         "category": "animals",
-        "county": "derry"
+        "county": "derry",
+        "price": "Paid",
+        "ages": "0-12 yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -31,7 +43,13 @@
         "description": "Features rare breeds of farm animals, beautiful gardens, and a large playpark.",
         "infoUrl": "https://www.weeadventurers.com/post/tannaghmore-gardens",
         "category": "animals",
-        "county": "armagh"
+        "county": "armagh",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -42,7 +60,13 @@
         "description": "A fantastic day out with animal feeding, indoor play, and tractor rides.",
         "infoUrl": "https://www.weeadventurers.com/post/fermanagh-fun-farm",
         "category": "animals",
-        "county": "fermanagh"
+        "county": "fermanagh",
+        "price": "Paid",
+        "ages": "0-12 yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -53,7 +77,13 @@
         "description": "Combines an animal farm with a brilliant fort-themed play area and petting zoo.",
         "infoUrl": "https://www.weeadventurers.com/post/fort-evergreen",
         "category": "animals",
-        "county": "down"
+        "county": "down",
+        "price": "Paid",
+        "ages": "0-10 yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -64,7 +94,13 @@
         "description": "Features exotic animals, a huge soft play area, and outdoor bouncy pillows.",
         "infoUrl": "https://www.weeadventurers.com/post/mountpanther-farm-park",
         "category": "animals",
-        "county": "down"
+        "county": "down",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -75,7 +111,13 @@
         "description": "Explore the wetlands, feed the ducks, and enjoy the stunning views of Strangford Lough.",
         "infoUrl": "https://www.weeadventurers.com/post/wwt-castle-espie",
         "category": "animals",
-        "county": "down"
+        "county": "down",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -86,7 +128,13 @@
         "description": "A family-run farm with a great inland beach, petting area, and beautiful walkways.",
         "infoUrl": "https://www.weeadventurers.com/post/rosepark-farm",
         "category": "animals",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -97,7 +145,13 @@
         "description": "A classic dairy farm experience with puppy cuddling, bottle feeding, and barrel rides.",
         "infoUrl": "https://www.weeadventurers.com/post/streamvale-farm",
         "category": "animals",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -108,7 +162,13 @@
         "description": "A beautiful estate featuring rare breed animals and a lovely woodland setting.",
         "infoUrl": "https://www.weeadventurers.com/post/glenpark-estate",
         "category": "animals",
-        "county": "tyrone"
+        "county": "tyrone",
+        "price": "Free Entry",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -119,7 +179,13 @@
         "description": "The classic NI seaside destination! Famous for its two main beaches (East and West Strand) and plenty of amusements nearby.",
         "infoUrl": "https://www.weeadventurers.com/post/portrush",
         "category": "beaches",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -130,7 +196,13 @@
         "description": "A landmark spot in Portrush. Perfect for a coffee with a view while the kids explore the rocky shoreline and paddling areas.",
         "infoUrl": "https://www.weeadventurers.com/post/arcadia",
         "category": "beaches",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -141,7 +213,13 @@
         "description": "Located in Holywood, this sandy beach has a brilliant, large playpark and plenty of green space for a family picnic.",
         "infoUrl": "https://www.weeadventurers.com/post/seapark-bay",
         "category": "beaches",
-        "county": "north down"
+        "county": "north down",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": false,
+        "accessible": true
       }
     },
     {
@@ -152,7 +230,13 @@
         "description": "Two beautiful beaches tucked away in a country park with forest walks, a waterfall, and a modern visitor centre.",
         "infoUrl": "https://www.weeadventurers.com/post/helen-s-bay",
         "category": "beaches",
-        "county": "north down"
+        "county": "north down",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -163,7 +247,13 @@
         "description": "A stunning beach where the 'Mountains of Mourne sweep down to the sea.' Steps away from the promenade and ice cream shops.",
         "infoUrl": "https://www.weeadventurers.com/post/newcastle-beach",
         "category": "beaches",
-        "county": "down"
+        "county": "down",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -174,7 +264,13 @@
         "description": "One of NI's longest beaches, famous for the Mussenden Temple perched on the cliff above. You can even drive your car onto this beach!",
         "infoUrl": "https://www.weeadventurers.com/post/downhill-strand",
         "category": "beaches",
-        "county": "derry"
+        "county": "derry",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": false,
+        "accessible": true
       }
     },
     {
@@ -185,7 +281,13 @@
         "description": "A massive indoor arena filled with bouncy castles, slides, and obstacles. Perfect for burning off energy on a rainy day.",
         "infoUrl": "https://www.weeadventurers.com/post/inflatable-world",
         "category": "indoors",
-        "county": "tyrone"
+        "county": "tyrone",
+        "price": "Paid",
+        "ages": "2-12 yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -196,7 +298,13 @@
         "description": "A focused play centre in Cookstown designed for younger children to explore and learn through play.",
         "infoUrl": "https://www.weeadventurers.com/post/wee-adventurers-play-hub",
         "category": "indoors",
-        "county": "tyrone"
+        "county": "tyrone",
+        "price": "Paid",
+        "ages": "0-5 yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -207,7 +315,13 @@
         "description": "A popular soft play centre with a large multi-level frame, slides, and a dedicated toddler area.",
         "infoUrl": "https://www.weeadventurers.com/post/happy-dayz",
         "category": "indoors",
-        "county": "tyrone"
+        "county": "tyrone",
+        "price": "Paid",
+        "ages": "0-10 yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -218,7 +332,13 @@
         "description": "A family-run adventure farm and indoor play area featuring animals and plenty of space to run around.",
         "infoUrl": "https://www.weeadventurers.com/post/duff-land",
         "category": "indoors",
-        "county": "tyrone"
+        "county": "tyrone",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -229,7 +349,13 @@
         "description": "A unique role-play cafe where children can use their imaginations while parents enjoy a coffee nearby.",
         "infoUrl": "https://www.weeadventurers.com/post/mini-minds-play-cafe",
         "category": "indoors",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Paid",
+        "ages": "0-6 yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -240,7 +366,13 @@
         "description": "A high-spec adventure centre with climbing walls and a huge multi-story soft play area.",
         "infoUrl": "https://www.weeadventurers.com/post/high-rise",
         "category": "indoors",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -251,7 +383,13 @@
         "description": "A cozy play cafe perfect for younger children, featuring role-play areas and great snacks for the adults.",
         "infoUrl": "https://www.weeadventurers.com/post/little-izzie-s-play-cafe",
         "category": "indoors",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Paid",
+        "ages": "0-6 yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -262,7 +400,13 @@
         "description": "A beautiful sensory-focused play centre designed to be a calm and engaging environment for little ones.",
         "infoUrl": "https://www.weeadventurers.com/post/nature-nurture",
         "category": "indoors",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Paid",
+        "ages": "0-4 yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -273,7 +417,13 @@
         "description": "Home to 'Surf Belfast' and a fantastic indoor water park with slides that the whole family will love.",
         "infoUrl": "https://www.weeadventurers.com/post/andersonstown-leisure-centre",
         "category": "indoors",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -284,7 +434,13 @@
         "description": "A creative and imaginative role-play studio where kids can pretend to be doctors, chefs, or shopkeepers.",
         "infoUrl": "https://www.weeadventurers.com/post/little-play-studio",
         "category": "indoors",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Paid",
+        "ages": "0-7 yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -295,7 +451,13 @@
         "description": "Belfast City Zoo's own indoor soft play. A fun, animal-themed adventure for kids to enjoy after seeing the zoo.",
         "infoUrl": "https://www.weeadventurers.com/post/roar-explore",
         "category": "indoors",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Paid",
+        "ages": "0-10 yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -306,7 +468,13 @@
         "description": "Ireland's award-winning science and discovery centre. Interactive exhibits for kids of all ages.",
         "infoUrl": "https://www.weeadventurers.com/post/w5",
         "category": "indoors",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -317,7 +485,13 @@
         "description": "Includes a great little indoor soft play area and a family-friendly restaurant perfect for a quick stop.",
         "infoUrl": "https://www.weeadventurers.com/post/dobbies-lisburn",
         "category": "indoors",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Paid",
+        "ages": "0-8 yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -328,7 +502,13 @@
         "description": "An imaginative role-play centre where children can learn and explore in a miniature version of a real town.",
         "infoUrl": "https://www.weeadventurers.com/post/honeybees-playtown",
         "category": "indoors",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Paid",
+        "ages": "0-7 yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -339,7 +519,13 @@
         "description": "A charming role-play village located in Antrim, designed specifically for toddlers and young children.",
         "infoUrl": "https://www.weeadventurers.com/post/the-wee-village",
         "category": "indoors",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Paid",
+        "ages": "0-6 yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -350,7 +536,13 @@
         "description": "A massive soft play and laser tag arena with multi-story frames and exciting slides.",
         "infoUrl": "https://www.weeadventurers.com/post/global-adventure-play",
         "category": "indoors",
-        "county": "down"
+        "county": "down",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -361,7 +553,13 @@
         "description": "A sensory-rich environment for children to explore through art, light, and creative play.",
         "infoUrl": "https://www.weeadventurers.com/post/the-imaginarium",
         "category": "indoors",
-        "county": "down"
+        "county": "down",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": false,
+        "accessible": true
       }
     },
     {
@@ -372,7 +570,13 @@
         "description": "A modern and clean soft play area in Enniskillen with a lovely cafe for parents.",
         "infoUrl": "https://www.weeadventurers.com/post/twig-tumble",
         "category": "indoors",
-        "county": "fermanagh"
+        "county": "fermanagh",
+        "price": "Paid",
+        "ages": "0-10 yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -383,7 +587,13 @@
         "description": "A well-established soft play centre in Portadown with frames for different age groups.",
         "infoUrl": "https://www.weeadventurers.com/post/playaway",
         "category": "indoors",
-        "county": "armagh"
+        "county": "armagh",
+        "price": "Paid",
+        "ages": "0-12 yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -394,7 +604,13 @@
         "description": "An indoor adventure centre featuring soft play, sensory areas, and role-play zones.",
         "infoUrl": "https://www.weeadventurers.com/post/the-hive",
         "category": "indoors",
-        "county": "armagh"
+        "county": "armagh",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -405,7 +621,13 @@
         "description": "A dedicated sensory space designed for children with additional needs, offering a safe and stimulating environment.",
         "infoUrl": "https://www.weeadventurers.com/post/the-sensory-xperience",
         "category": "indoors",
-        "county": "armagh"
+        "county": "armagh",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": false,
+        "accessible": true
       }
     },
     {
@@ -416,7 +638,13 @@
         "description": "A massive entertainment hub featuring a trampoline park, ninja course, and soft play area.",
         "infoUrl": "https://www.weeadventurers.com/post/airtastic-craigavon",
         "category": "indoors",
-        "county": "armagh"
+        "county": "armagh",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -427,7 +655,13 @@
         "description": "The ultimate rainy day spot: bowling, cinema, mini-golf, and a huge 'Alley Cats' soft play area.",
         "infoUrl": "https://www.weeadventurers.com/post/the-jet-centre",
         "category": "indoors",
-        "county": "derry"
+        "county": "derry",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -438,7 +672,13 @@
         "description": "A family-friendly hardware and lifestyle store that surprisingly houses a lovely little soft play and cafe upstairs!",
         "infoUrl": "https://www.weeadventurers.com/post/r-crawford-co",
         "category": "indoors",
-        "county": "derry"
+        "county": "derry",
+        "price": "Paid",
+        "ages": "0-6 yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -449,7 +689,13 @@
         "description": "Walk the historic 17th-century walls! A great way to see the city from above with plenty of cannons for the kids to spot.",
         "infoUrl": "https://www.weeadventurers.com/post/the-derry-walls",
         "category": "museums",
-        "county": "derry"
+        "county": "derry",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -460,7 +706,13 @@
         "description": "A pretty 17th-century house with a famous costume collection and lovely woodland walks. Keep an eye out for the friendly ghost!",
         "infoUrl": "https://www.weeadventurers.com/post/springhill-national-trust",
         "category": "museums",
-        "county": "derry"
+        "county": "derry",
+        "price": "Paid/NT",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -471,7 +723,13 @@
         "description": "Perched right on the cliff edge! Explore the ruins of Downhill House and run through the wide open gardens.",
         "infoUrl": "https://www.weeadventurers.com/post/mussenden-temple-downhill-demesne",
         "category": "museums",
-        "county": "derry"
+        "county": "derry",
+        "price": "Paid/NT",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": false,
+        "accessible": true
       }
     },
     {
@@ -482,7 +740,13 @@
         "description": "Atmospheric wooded estate beside the River Blackwater. Features a great adventure playground and a quirky cafe.",
         "infoUrl": "https://www.weeadventurers.com/post/the-argory",
         "category": "museums",
-        "county": "tyrone"
+        "county": "tyrone",
+        "price": "Paid/NT",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -493,7 +757,13 @@
         "description": "A grand mansion on the edge of Enniskillen. Perfect for a family stroll around the lake and through the wooded trails.",
         "infoUrl": "https://www.weeadventurers.com/post/castle-coole",
         "category": "museums",
-        "county": "fermanagh"
+        "county": "fermanagh",
+        "price": "Paid/NT",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -504,7 +774,13 @@
         "description": "Explore the castle towers and the Inniskillings Museum. Great interactive displays for kids interested in history.",
         "infoUrl": "https://www.weeadventurers.com/post/enniskillen-castle",
         "category": "museums",
-        "county": "fermanagh"
+        "county": "fermanagh",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -515,7 +791,13 @@
         "description": "A lakeside paradise! WWII history meets adventure with forest walks, a butterfly garden, and boat hire.",
         "infoUrl": "https://www.weeadventurers.com/post/castle-archdale",
         "category": "museums",
-        "county": "fermanagh"
+        "county": "fermanagh",
+        "price": "Free Entry",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -526,7 +808,13 @@
         "description": "Famous for the Florence Court Yew. There's a great walled garden, a sawmill, and miles of forest paths to explore.",
         "infoUrl": "https://www.weeadventurers.com/post/florence-court",
         "category": "museums",
-        "county": "fermanagh"
+        "county": "fermanagh",
+        "price": "Paid/NT",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -537,7 +825,13 @@
         "description": "A mix of formal and wild gardens. The 'Natural Play' area and hidden trails are brilliant for little explorers.",
         "infoUrl": "https://www.weeadventurers.com/post/rowallane-garden",
         "category": "museums",
-        "county": "down"
+        "county": "down",
+        "price": "Paid/NT",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -548,7 +842,13 @@
         "description": "Walk through a jungle filled with free-flying butterflies! Also features a maze and a great garden centre cafe.",
         "infoUrl": "https://www.weeadventurers.com/post/seaforde-gardens-and-tropical-butterfly-house",
         "category": "museums",
-        "county": "down"
+        "county": "down",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -559,7 +859,13 @@
         "description": "A must-visit! Home to an incredible award-winning adventure playground, trails, and a beautiful tea room.",
         "infoUrl": "https://www.weeadventurers.com/post/montalto-estate",
         "category": "museums",
-        "county": "down"
+        "county": "down",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -570,7 +876,13 @@
         "description": "One of NI's oldest estates. The walled garden is stunning, and the Pizza Pavilion is a great family lunch spot.",
         "infoUrl": "https://www.weeadventurers.com/post/glenarm-castle",
         "category": "museums",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -581,7 +893,13 @@
         "description": "Interactive science centre with hundreds of hands-on exhibits. A perfect rainy-day destination for all ages.",
         "infoUrl": "https://www.weeadventurers.com/post/w5",
         "category": "museums",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -592,7 +910,13 @@
         "description": "A forest and river walk filled with local history. Great for a quiet family bike ride or a dander through the trees.",
         "infoUrl": "https://www.weeadventurers.com/post/an-creagan",
         "category": "museums",
-        "county": "tyrone"
+        "county": "tyrone",
+        "price": "Free Entry",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -603,7 +927,13 @@
         "description": "Beautiful grounds featuring rare-breed animals, a farm shop, and lovely forest paths.",
         "infoUrl": "https://www.weeadventurers.com/post/glenpark-estate",
         "category": "museums",
-        "county": "tyrone"
+        "county": "tyrone",
+        "price": "Free Entry",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -614,7 +944,13 @@
         "description": "A magical forest park featuring the 'Renardine' fairy trail and a fantastic wooden play area for children.",
         "infoUrl": "https://www.weeadventurers.com/post/pomeroy-forest",
         "category": "playparks",
-        "county": "tyrone"
+        "county": "tyrone",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -625,7 +961,13 @@
         "description": "A spacious urban park in Omagh with a modern playground and an outdoor gym for parents.",
         "infoUrl": "https://www.weeadventurers.com/post/grange-park",
         "category": "playparks",
-        "county": "tyrone"
+        "county": "tyrone",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": false,
+        "accessible": true
       }
     },
     {
@@ -636,7 +978,13 @@
         "description": "A destination park with a massive multi-age playground, deer enclosures, and family mountain bike trails.",
         "infoUrl": "https://www.weeadventurers.com/post/gortin-glen",
         "category": "playparks",
-        "county": "tyrone"
+        "county": "tyrone",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -647,7 +995,13 @@
         "description": "Explore the wild bogland with forest trails and a river walk. Great for bikes and buggies.",
         "infoUrl": "https://www.weeadventurers.com/post/an-creag%C3%A0n",
         "category": "playparks",
-        "county": "tyrone"
+        "county": "tyrone",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -658,7 +1012,13 @@
         "description": "A peaceful lakeside spot in Fivemiletown. Perfect for a walk around the water followed by a play in the park.",
         "infoUrl": "https://www.weeadventurers.com/post/round-lake",
         "category": "playparks",
-        "county": "tyrone"
+        "county": "tyrone",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": false,
+        "accessible": true
       }
     },
     {
@@ -669,7 +1029,13 @@
         "description": "Home to the Dark Sky Observatory. Features wooded walks and world-class mountain biking trails.",
         "infoUrl": "https://www.weeadventurers.com/post/davagh-forest",
         "category": "playparks",
-        "county": "tyrone"
+        "county": "tyrone",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": false,
+        "accessible": true
       }
     },
     {
@@ -680,7 +1046,13 @@
         "description": "A 70-acre park with a massive lake. It offers a great playground, tennis courts, and plenty of space for family picnics.",
         "infoUrl": "https://www.weeadventurers.com/post/dungannon-park",
         "category": "playparks",
-        "county": "tyrone"
+        "county": "tyrone",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -691,7 +1063,13 @@
         "description": "Famous for its vibrant gardens and manor ruins. The large playground is a hit with kids of all ages.",
         "infoUrl": "https://www.weeadventurers.com/post/drum-manor-forest-park",
         "category": "playparks",
-        "county": "tyrone"
+        "county": "tyrone",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -702,7 +1080,13 @@
         "description": "Beautiful walled gardens with plenty of hidden corners for kids to discover. Check out the Pizza Pavilion!",
         "infoUrl": "https://www.weeadventurers.com/post/glenarm-castle",
         "category": "playparks",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -713,7 +1097,13 @@
         "description": "Dramatic coastal walks in Portrush. Great for exploring rock pools and watching the waves crash against the cliffs.",
         "infoUrl": "https://www.weeadventurers.com/post/ramore-head",
         "category": "playparks",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": false,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -724,7 +1114,13 @@
         "description": "Belfast's oldest municipal park. Large playgrounds, eco-trails, and wide paths perfect for learning to cycle.",
         "infoUrl": "https://www.weeadventurers.com/services-9-1",
         "category": "playparks",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -735,7 +1131,13 @@
         "description": "A massive, modern adventure park in Newtownabbey with climbing frames, zip wires, and a skate park.",
         "infoUrl": "https://www.weeadventurers.com/post/__v36",
         "category": "playparks",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -746,7 +1148,13 @@
         "description": "The 'Jewel of Lisburn'. Features a fantastic playground, a duck pond, and safe, flat walking paths.",
         "infoUrl": "https://www.weeadventurers.com/post/wallace-park",
         "category": "playparks",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -757,7 +1165,13 @@
         "description": "Home to Belfast Castle. The playground here is excellent, and the hike to McArt's Fort offers the best view in the city.",
         "infoUrl": "https://www.weeadventurers.com/post/cave-hill",
         "category": "playparks",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -768,7 +1182,13 @@
         "description": "A lovely park in the heart of Ballymena with a lake, large playground, and well-maintained flower gardens.",
         "infoUrl": "https://www.weeadventurers.com/post/people-s-park",
         "category": "playparks",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": false,
+        "accessible": true
       }
     },
     {
@@ -779,7 +1199,13 @@
         "description": "Situated on the banks of Lough Neagh. A beautiful spot for a walk, with a great playground and cafe.",
         "infoUrl": "https://www.weeadventurers.com/post/antrim-lough-shore-park",
         "category": "playparks",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -790,7 +1216,13 @@
         "description": "Located within the Stormont Estate. This is one of the best inclusive playgrounds in NI, catering to all abilities.",
         "infoUrl": "https://www.weeadventurers.com/post/mo-mowlam",
         "category": "playparks",
-        "county": "north down"
+        "county": "north down",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -801,7 +1233,13 @@
         "description": "Beach meets park! A large grassy area with a seaside playground and views across Belfast Lough.",
         "infoUrl": "https://www.weeadventurers.com/post/seapark-bay",
         "category": "playparks",
-        "county": "north down"
+        "county": "north down",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": false,
+        "accessible": true
       }
     },
     {
@@ -812,7 +1250,13 @@
         "description": "Recently upgraded with a fantastic digital sculpture trail and a large, modern lakeside playground.",
         "infoUrl": "https://www.weeadventurers.com/post/hillsborough-forest-park",
         "category": "playparks",
-        "county": "down"
+        "county": "down",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -823,7 +1267,13 @@
         "description": "A multi-award-winning adventure playground designed to look like a treehouse. A must-visit destination.",
         "infoUrl": "https://www.weeadventurers.com/post/montalto-estate",
         "category": "playparks",
-        "county": "down"
+        "county": "down",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -834,7 +1284,13 @@
         "description": "Feed the ducks and explore the wetlands. Great nature-based play areas and bird watching for kids.",
         "infoUrl": "https://www.weeadventurers.com/post/castle-espie",
         "category": "playparks",
-        "county": "down"
+        "county": "down",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -845,7 +1301,13 @@
         "description": "Home to the Narnia Trail! A beautiful park in Rostrevor with mountain views and a great playground.",
         "infoUrl": "https://www.weeadventurers.com/post/kilbroney-park",
         "category": "playparks",
-        "county": "down"
+        "county": "down",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -856,7 +1318,13 @@
         "description": "Features the longest miniature railway in Ireland and a massive adventure playground with views of the lough.",
         "infoUrl": "https://www.weeadventurers.com/post/delamont-country-park",
         "category": "playparks",
-        "county": "down"
+        "county": "down",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -867,7 +1335,13 @@
         "description": "Home to the Peace Maze and a brilliant play area. Perfect for family walks around the lake.",
         "infoUrl": "https://www.weeadventurers.com/post/castlewellan-forest-park",
         "category": "playparks",
-        "county": "down"
+        "county": "down",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -878,7 +1352,13 @@
         "description": "Famous for its stepping stones and forest trails. A great place for families to explore the 'real' Narnia.",
         "infoUrl": "https://www.weeadventurers.com/post/tollymore-forest-park",
         "category": "playparks",
-        "county": "down"
+        "county": "down",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -889,7 +1369,13 @@
         "description": "Lakeside trails, WWII history, and a great playground. A Fermanagh favourite for sunny days.",
         "infoUrl": "https://www.weeadventurers.com/post/castle-archdale",
         "category": "playparks",
-        "county": "fermanagh"
+        "county": "fermanagh",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -900,7 +1386,13 @@
         "description": "Enniskillen's main riverside park. Duck feeding, boat trips, and a well-equipped playground.",
         "infoUrl": "https://www.weeadventurers.com/post/round-o-jetty",
         "category": "playparks",
-        "county": "fermanagh"
+        "county": "fermanagh",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -911,7 +1403,13 @@
         "description": "Set in a rural estate with a large lake, forest walks, and a quiet, safe play area.",
         "infoUrl": "https://www.weeadventurers.com/post/loughgall-country-park",
         "category": "playparks",
-        "county": "armagh"
+        "county": "armagh",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -922,7 +1420,13 @@
         "description": "Located on the shores of Lough Neagh. Woodland walks and a pleasant playground in a quiet setting.",
         "infoUrl": "https://www.weeadventurers.com/post/maghery-country-park",
         "category": "playparks",
-        "county": "armagh"
+        "county": "armagh",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": false,
+        "accessible": true
       }
     },
     {
@@ -933,7 +1437,13 @@
         "description": "Incredible 'All Out Play' adventure playground with giant castles and zip lines. Great for older kids too.",
         "infoUrl": "https://www.weeadventurers.com/post/gosford-forest-park",
         "category": "playparks",
-        "county": "armagh"
+        "county": "armagh",
+        "price": "Free Entry",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -944,7 +1454,13 @@
         "description": "Unique bogland park with a narrow-gauge railway and miles of walking trails through the woods.",
         "infoUrl": "https://www.weeadventurers.com/post/peatlands-park",
         "category": "playparks",
-        "county": "armagh"
+        "county": "armagh",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -955,7 +1471,13 @@
         "description": "A lovely village park beside the canal. Famous for its tea rooms and the beautiful towpath walk.",
         "infoUrl": "https://www.weeadventurers.com/post/scarva-park",
         "category": "playparks",
-        "county": "armagh"
+        "county": "armagh",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -966,7 +1488,13 @@
         "description": "Home to the Secret Garden and a fantastic bird sanctuary. A quiet, peaceful park with a good playground.",
         "infoUrl": "https://www.weeadventurers.com/post/edenvilla-park",
         "category": "playparks",
-        "county": "armagh"
+        "county": "armagh",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -977,7 +1505,13 @@
         "description": "Nature reserve on Lough Neagh. Great for bird watching, woodland walks, and a lakeside picnic.",
         "infoUrl": "https://www.weeadventurers.com/post/oxford-island",
         "category": "playparks",
-        "county": "armagh"
+        "county": "armagh",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -988,7 +1522,13 @@
         "description": "Includes the 'Giant's Lair' adventure walk—a magical trail through the forest for little imaginations.",
         "infoUrl": "https://www.weeadventurers.com/post/slieve-gullion-forest-park",
         "category": "playparks",
-        "county": "armagh"
+        "county": "armagh",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -999,7 +1539,13 @@
         "description": "The second largest park in Ireland! Features a huge lake, miles of paths, and a great playground.",
         "infoUrl": "https://www.weeadventurers.com/post/lurgan-park",
         "category": "playparks",
-        "county": "armagh"
+        "county": "armagh",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -1010,7 +1556,13 @@
         "description": "Farm animals, rare breeds, and a massive playground. A brilliant free day out for the whole family.",
         "infoUrl": "https://www.weeadventurers.com/post/tannaghmore-gardens",
         "category": "playparks",
-        "county": "armagh"
+        "county": "armagh",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -1021,7 +1573,13 @@
         "description": "A spacious park in Derry with a focus on biodiversity and outdoor family fun.",
         "infoUrl": "https://www.weeadventurers.com/post/ballyarnett-country-park",
         "category": "playparks",
-        "county": "derry"
+        "county": "derry",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": false,
+        "accessible": true
       }
     },
     {
@@ -1032,7 +1590,13 @@
         "description": "A high-quality, accessible playground in the heart of Limavady designed for all children.",
         "infoUrl": "https://www.weeadventurers.com/post/limavady-accessible-play-park",
         "category": "playparks",
-        "county": "derry"
+        "county": "derry",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -1043,7 +1607,13 @@
         "description": "Located at Flowerfield Arts Centre. A fully inclusive play area with equipment for children of all abilities.",
         "infoUrl": "https://www.weeadventurers.com/post/diversity-park",
         "category": "playparks",
-        "county": "derry"
+        "county": "derry",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -1054,7 +1624,13 @@
         "description": "Lovely riverside walks and forest trails in a quiet setting. Perfect for a family dander.",
         "infoUrl": "https://www.weeadventurers.com/post/claudy-country-park",
         "category": "playparks",
-        "county": "derry"
+        "county": "derry",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": false,
+        "accessible": true
       }
     },
     {
@@ -1065,7 +1641,13 @@
         "description": "Home to the highest waterfall in NI! A stunning wooded park with dramatic walks and bridges.",
         "infoUrl": "https://www.weeadventurers.com/post/ness-country-park",
         "category": "playparks",
-        "county": "derry"
+        "county": "derry",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -1076,7 +1658,13 @@
         "description": "A beautiful lough-side setting with a newly refurbished playground and forest 'wood-spirit' walk.",
         "infoUrl": "https://www.weeadventurers.com/post/ballyronan-marina",
         "category": "playparks",
-        "county": "derry"
+        "county": "derry",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -1087,7 +1675,13 @@
         "description": "A hidden gem for forest walks and exploring the foothills of the Sperrins.",
         "infoUrl": "https://www.weeadventurers.com/post/iniscarn-forest-park",
         "category": "playparks",
-        "county": "derry"
+        "county": "derry",
+        "price": "Free",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": false,
+        "cafe": false,
+        "accessible": true
       }
     },
     {
@@ -1098,7 +1692,13 @@
         "description": "Ireland's giant inflatable water park! Features massive slides, obstacles, and a 'total wipeout' style experience on the lake.",
         "infoUrl": "https://www.weeadventurers.com/post/the-lake-kilrea",
         "category": "sports",
-        "county": "derry"
+        "county": "derry",
+        "price": "Paid",
+        "ages": "6+ yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -1109,7 +1709,13 @@
         "description": "One of the best adventure centres in NI. Offering paintball, zorbing, tree-top high ropes, and seasonal events like the Fright Night.",
         "infoUrl": "https://www.weeadventurers.com/post/the-jungle",
         "category": "sports",
-        "county": "derry"
+        "county": "derry",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -1120,7 +1726,13 @@
         "description": "A huge indoor entertainment hub. Features a trampoline park, ninja course, laser tag, and bowling all under one roof.",
         "infoUrl": "https://www.weeadventurers.com/post/airtastic-craigavon",
         "category": "sports",
-        "county": "armagh"
+        "county": "armagh",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -1131,7 +1743,13 @@
         "description": "Based in Castlewellan, offering mountain bike hire, kayaking, and canoeing on the lake. Great for active families.",
         "infoUrl": "https://www.weeadventurers.com/post/life-adventure-centre",
         "category": "sports",
-        "county": "down"
+        "county": "down",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -1142,7 +1760,13 @@
         "description": "A premier water sports park with a huge inflatable aqua park, cable wakeboarding, and luxury glamping pods.",
         "infoUrl": "https://www.weeadventurers.com/post/let-s-go-hydro",
         "category": "sports",
-        "county": "north down"
+        "county": "north down",
+        "price": "Paid",
+        "ages": "7+ yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -1153,7 +1777,13 @@
         "description": "Climb, swing, and zip through the trees at Antrim Lough Shore. A brilliant challenge for brave little adventurers.",
         "infoUrl": "https://www.weeadventurers.com/post/castlewood-tree-top-adventure",
         "category": "sports",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Paid",
+        "ages": "7+ yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -1164,7 +1794,13 @@
         "description": "Home to the 'Surf Belfast' indoor wave rider and a fantastic water park with three high-speed water slides.",
         "infoUrl": "https://www.weeadventurers.com/post/andersonstown-leisure-centre",
         "category": "sports",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Paid",
+        "ages": "All Ages",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -1175,7 +1811,13 @@
         "description": "A vertical adventure centre featuring Clip 'n Climb walls, a massive soft play, and sensory rooms.",
         "infoUrl": "https://www.weeadventurers.com/post/high-rise",
         "category": "sports",
-        "county": "antrim"
+        "county": "antrim",
+        "price": "Paid",
+        "ages": "4+ yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -1186,7 +1828,13 @@
         "description": "Indoor bouncy heaven! A huge warehouse filled with every type of inflatable slide and obstacle you can imagine.",
         "infoUrl": "https://www.weeadventurers.com/post/inflatable-world",
         "category": "sports",
-        "county": "tyrone"
+        "county": "tyrone",
+        "price": "Paid",
+        "ages": "2-12 yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -1197,7 +1845,13 @@
         "description": "A family-friendly driving range in Cookstown. Great for a bit of competitive fun or introducing the kids to golf.",
         "infoUrl": "https://www.weeadventurers.com/post/dj-s-golf-driving-range",
         "category": "sports",
-        "county": "tyrone"
+        "county": "tyrone",
+        "price": "Paid",
+        "ages": "6+ yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     },
     {
@@ -1208,7 +1862,13 @@
         "description": "Extreme adventure! Off-road trucking, the giant swing, zip lines, and clay pigeon shooting for older kids and adults.",
         "infoUrl": "https://www.weeadventurers.com/post/todd-s-leap",
         "category": "sports",
-        "county": "tyrone"
+        "county": "tyrone",
+        "price": "Paid",
+        "ages": "8+ yrs",
+        "parking": true,
+        "toilets": true,
+        "cafe": true,
+        "accessible": true
       }
     }
   ]
