@@ -14,10 +14,16 @@
         .full-width { grid-column: span 2; }
         
         .search-group { display: flex; gap: 10px; }
-        .btn-search { background: #2196F3; width: auto; padding: 0 20px; margin-top: 0; white-space: nowrap; }
+        .btn-search { background: #2196F3; width: auto; padding: 0 20px; margin-top: 0; white-space: nowrap; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
         
-        button { width: 100%; padding: 15px; background: #2e7d32; color: white; border: none; border-radius: 8px; font-weight: bold; margin-top: 25px; cursor: pointer; font-size: 16px; transition: background 0.3s; }
-        button:hover { background: #1b5e20; }
+        /* Facility Checkbox Styling */
+        .facility-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px solid #eee; }
+        .facility-item { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: bold; cursor: pointer; }
+        .facility-item input { width: auto; cursor: pointer; }
+
+        button.main-btn { width: 100%; padding: 15px; background: #2e7d32; color: white; border: none; border-radius: 8px; font-weight: bold; margin-top: 25px; cursor: pointer; font-size: 16px; transition: background 0.3s; }
+        button.main-btn:hover { background: #1b5e20; }
+        
         #output-container { margin-top: 30px; display: none; border-top: 2px dashed #ddd; padding-top: 20px; }
         pre { background: #272822; color: #f8f8f2; padding: 15px; border-radius: 8px; overflow-x: auto; font-size: 13px; line-height: 1.6; }
         .copy-hint { font-size: 14px; color: #2e7d32; font-weight: bold; margin-bottom: 10px; }
@@ -36,7 +42,7 @@
                 <input type="text" id="addressInput" placeholder="e.g. Davagh Forest or 123 Main St, Portrush">
                 <button class="btn-search" onclick="lookupAddress()">FIND COORDS</button>
             </div>
-            <div id="searchStatus" class="status">Type a name and click find to auto-fill coordinates.</div>
+            <div id="searchStatus" class="status">Auto-fills name and coordinates.</div>
         </div>
 
         <div class="full-width">
@@ -69,6 +75,26 @@
             </select>
         </div>
 
+        <div>
+            <label>Price Info</label>
+            <input type="text" id="price" placeholder="e.g. Free / £5 / Paid">
+        </div>
+
+        <div>
+            <label>Age Range</label>
+            <input type="text" id="ages" placeholder="e.g. All ages / 0-12 yrs">
+        </div>
+
+        <div class="full-width">
+            <label>Facilities Available</label>
+            <div class="facility-grid">
+                <label class="facility-item"><input type="checkbox" id="parking"> 🚗 Parking</label>
+                <label class="facility-item"><input type="checkbox" id="toilets"> 🚽 Toilets</label>
+                <label class="facility-item"><input type="checkbox" id="cafe"> ☕ Cafe</label>
+                <label class="facility-item"><input type="checkbox" id="accessible"> ♿ Accessible</label>
+            </div>
+        </div>
+
         <div class="full-width">
             <label>Coordinates (Latitude, Longitude)</label>
             <input type="text" id="coords" placeholder="54.7357, -7.0508">
@@ -85,7 +111,7 @@
         </div>
     </div>
 
-    <button onclick="generateCode()">GENERATE CODE SNIPPET</button>
+    <button class="main-btn" onclick="generateCode()">GENERATE CODE SNIPPET</button>
 
     <div id="output-container">
         <p class="copy-hint">✅ Ready! Paste this into your "features" list in map-data.json:</p>
@@ -123,6 +149,13 @@
         const name = document.getElementById('name').value;
         const county = document.getElementById('county').value;
         const category = document.getElementById('category').value;
+        const price = document.getElementById('price').value;
+        const ages = document.getElementById('ages').value;
+        const parking = document.getElementById('parking').checked;
+        const toilets = document.getElementById('toilets').checked;
+        const cafe = document.getElementById('cafe').checked;
+        const accessible = document.getElementById('accessible').checked;
+        
         const coordsRaw = document.getElementById('coords').value.split(',');
         const desc = document.getElementById('desc').value;
         const url = document.getElementById('url').value;
@@ -132,7 +165,6 @@
         const lat = parseFloat(coordsRaw[0].trim());
         const lng = parseFloat(coordsRaw[1].trim());
 
-        // We build the string manually to get your exact requested format
         const snippet = `    {
       "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [${lng}, ${lat}] },
@@ -141,7 +173,13 @@
         "description": "${desc.replace(/"/g, '\\"')}",
         "infoUrl": "${url}",
         "category": "${category}",
-        "county": "${county}"
+        "county": "${county}",
+        "price": "${price}",
+        "ages": "${ages}",
+        "parking": ${parking},
+        "toilets": ${toilets},
+        "cafe": ${cafe},
+        "accessible": ${accessible}
       }
     },`;
 
